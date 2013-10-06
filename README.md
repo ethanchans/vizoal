@@ -7,7 +7,12 @@ Vizoal API
 <li> Get players by club id</li>
 <li> Get clubs by league id</li>
 <li> Get player profile by player id </li>
-<li> Get  </li>
+<li> Get homepage players </li>
+<li> Create an account </li>
+<li> Update an account </li>
+<li> Login </li>
+<li> Post a comment </li>
+<li> Get comment list by player id </li>
 
 </ol>
 
@@ -21,6 +26,9 @@ Vizoal API
 				
 ###Header Parameters		
 	1) Content-Type = application/json 
+	
+###Image URL			
+	/vizoal/image/android/player/3.0/{player_fm_id}.png
 
 ###JSON Response
 ```
@@ -94,6 +102,9 @@ Vizoal API
 				
 ###Header Parameters		
 	1) Content-Type = application/json 
+	
+###Image URL			
+	/vizoal/image/android/player/2.0/{player_fm_id}.png
 
 ###JSON Response Sample
 ```
@@ -273,6 +284,9 @@ Vizoal API
 				
 ###Header Parameters		
 	1) Content-Type = application/json 
+	
+###Image URL			
+	 /vizoal/image/android/club_logo/3.0/{club_fm_id}.png
 
 ###JSON Response Sample
 ```
@@ -319,6 +333,9 @@ Vizoal API
 				
 ###Header Parameters		
 	1) Content-Type = application/json 
+	
+###Image URL			
+	/vizoal/image/android/player/3.0/{player_fm_id}.png
 
 ###JSON Response Sample
 ```
@@ -473,4 +490,24 @@ Vizoal API
 }
 ```
 
+##5 : Get homepage players
+------------------------
+###URL 
+        /vizoal/services/player/homepage/0
+           
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+	
+###Image URL			
+	/vizoal/image/android/homepage/1.png
 
+### Response Sample (Not a json format now, might need to change later)
+```
+
+Lionel Messi,Cristiano Ronaldo,Neymar,Wayne Rooney;1.png,2.png,3.png,4.png
+
+```
+ 
