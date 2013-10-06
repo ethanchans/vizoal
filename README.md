@@ -274,7 +274,7 @@ Vizoal API
 ###Header Parameters		
 	1) Content-Type = application/json 
 
-###JSON Response
+###JSON Response Sample
 ```
 {
     "status": {
@@ -307,3 +307,170 @@ Vizoal API
     ]
 }
 ```
+
+
+##4 : Get player profile by player id
+------------------------
+###URL 
+        /vizoal/services/player/{playerId}
+           
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+###JSON Response Sample
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-15-220",
+            "duration": 54
+        }
+    },
+    "result": {
+        "playerId": 21,
+        "firstName": "Ryan",
+        "lastName": "Giggs",
+        "fullName": "Ryan Joseph Giggs",
+        "nickName": "",
+        "nationOfBirth": 116,
+        "nationDisplay": 116,
+        "nationOfBirthName": "Wales",
+        "cityOfBirth": "Cardiff",
+        "dateOfBirth": "1973-11-29",
+        "dateOfBirth_andriod": "November 29 1973",
+        "age": 39,
+        "weight": "69kg",
+        "height": "180cm",
+        "preferFoot": "left",
+        "currentClub": 23,
+        "currentClubName": "Manchester United F.C.",
+        "fmId": 2018995,
+        "nationality_fmid": 801,
+        "club_fm_id": 680,
+        "leagueId": 11,
+        "leagueName": "Barclays Premier League",
+        "version": 2,
+        "playerPositionList": [
+            {
+                "playerPositionId": 48,
+                "playerId": 21,
+                "name": "AMC",
+                "efficiency": "100%",
+                "order": 1,
+                "version": 1
+            },
+            {
+                "playerPositionId": 49,
+                "playerId": 21,
+                "name": "AML",
+                "efficiency": "90%",
+                "order": 2,
+                "version": 1
+            },
+            {
+                "playerPositionId": 50,
+                "playerId": 21,
+                "name": "ML",
+                "efficiency": "90%",
+                "order": 3,
+                "version": 1
+            },
+            {
+                "playerPositionId": 51,
+                "playerId": 21,
+                "name": "MC",
+                "efficiency": "90%",
+                "order": 4,
+                "version": 1
+            },
+            {
+                "playerPositionId": 52,
+                "playerId": 21,
+                "name": "AMR",
+                "efficiency": "70%",
+                "order": 5,
+                "version": 1
+            },
+            {
+                "playerPositionId": 53,
+                "playerId": 21,
+                "name": "ST",
+                "efficiency": "50%",
+                "order": 6,
+                "version": 1
+            }
+        ],
+        "playerClubRecordList": [
+            {
+                "playerClubRecordId": 41,
+                "clubId": 23,
+                "clubName": "Manchester United F.C.",
+                "playerId": 21,
+                "seasonFrom": "1987-88",
+                "seasonEnd": "1990-91",
+                "previousClubId": null,
+                "transferInfo": null,
+                "youthStatus": "1",
+                "loanFrom": null,
+                "loanFromName": null,
+                "coOwnWith": null,
+                "coOwnWithName": null,
+                "currentStatus": null,
+                "order": 1,
+                "version": 1
+            },
+            {
+                "playerClubRecordId": 42,
+                "clubId": 23,
+                "clubName": "Manchester United F.C.",
+                "playerId": 21,
+                "seasonFrom": "1990-91",
+                "seasonEnd": "Present",
+                "previousClubId": null,
+                "transferInfo": null,
+                "youthStatus": "0",
+                "loanFrom": null,
+                "loanFromName": null,
+                "coOwnWith": null,
+                "coOwnWithName": null,
+                "currentStatus": null,
+                "order": null,
+                "version": 1
+            }
+        ],
+        "playerPlayerNationalityList": [
+            {
+                "playerNationalityId": 11,
+                "playerId": 21,
+                "nationalityId": 116,
+                "name": "Wales",
+                "abbreviation": "Welsh",
+                "eligible": false,
+                "isFirstTeam": true,
+                "order": 1,
+                "version": 3
+            },
+            {
+                "playerNationalityId": 12,
+                "playerId": 21,
+                "nationalityId": 188,
+                "name": "Sierra Leone",
+                "abbreviation": "Sierra Leonian",
+                "eligible": false,
+                "isFirstTeam": true,
+                "order": 2,
+                "version": 4
+            }
+        ]
+    }
+}
+```
+
+
