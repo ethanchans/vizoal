@@ -511,3 +511,30 @@ Lionel Messi,Cristiano Ronaldo,Neymar,Wayne Rooney;1.png,2.png,3.png,4.png
 
 ```
  
+ 
+ 
+##6 : Create an account  
+------------------------
+###Coming soon
+
+
+##7 : Update an account  
+------------------------
+###Coming soon
+
+
+##8 : Login  
+------------------------
+###Coming soon
+
+
+##9 : Post a comment  
+------------------------
+###Coming soon
+
+
+##10 : Get comment list by player id  
+------------------------
+###Coming soon
+
+
