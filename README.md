@@ -257,3 +257,53 @@ Vizoal API
 }
 ```
 
+##3 : Get clubs by league
+------------------------
+###URL 
+        Right now just hard-coded for top 5 leagues:
+        
+        Barclays Premier League(England):  /vizoal/services/clublistByLeague/11  
+        Bundesliga(Germany):               /vizoal/services/clublistByLeague/17  
+        Ligue 1(France):                   /vizoal/services/clublistByLeague/21  
+        Liga BBVA(Spain):                  /vizoal/services/clublistByLeague/19 
+        Serie A(Italy):                    /vizoal/services/clublistByLeague/15  
+           
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+###JSON Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-15-220",
+            "duration": 9
+        }
+    },
+    "result": [
+        {
+            "clubId": 33,
+            "name": "West Bromwich Albion F.C.",
+            "leagueId": 11,
+            "fmId": 734,
+            "sort": 0,
+            "version": 1
+        },
+        {
+            "clubId": 34,
+            "name": "West Ham United F.C.",
+            "leagueId": 11,
+            "fmId": 735,
+            "sort": 0,
+            "version": 1
+        }
+    ]
+}
+```
