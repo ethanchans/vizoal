@@ -502,7 +502,10 @@ Vizoal API
 	1) Content-Type = application/json 
 	
 ###Image URL			
-	/vizoal/image/android/homepage/1.png
+	/vizoal/image/android/homepage/hdRez/1.png
+	/vizoal/image/android/homepage/hiRez/1.png
+	/vizoal/image/android/homepage/medRez/1.png
+	/vizoal/image/android/homepage/lowRez/1.png
 
 ### Response Sample (Not a json format now, might need to change later)
 ```
