@@ -493,7 +493,7 @@ Vizoal API
 ##5 : Get homepage players
 ------------------------
 ###URL 
-        /vizoal/services/player/homepage/0
+        /vizoal/services/player/homepage
            
 ###Method			
 	GET
@@ -501,16 +501,50 @@ Vizoal API
 ###Header Parameters		
 	1) Content-Type = application/json 
 	
-###Image URL			
+###Image URL (it has different quality, mostly just for android to pick proper size of the image)
+
 	/vizoal/image/android/homepage/hdRez/1.png
 	/vizoal/image/android/homepage/hiRez/1.png
 	/vizoal/image/android/homepage/medRez/1.png
 	/vizoal/image/android/homepage/lowRez/1.png
 
-### Response Sample (Not a json format now, might need to change later)
+### Response
 ```
 
-Lionel Messi,Cristiano Ronaldo,Neymar,Wayne Rooney;1.png,2.png,3.png,4.png
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-15-220",
+            "duration": 6
+        }
+    },
+    "result": [
+        {
+            "playerId": 960,
+            "name": "Lionel Messi",
+            "image": "1.png"
+        },
+        {
+            "playerId": 1205,
+            "name": "Cristiano Ronaldo",
+            "image": "2.png"
+        },
+        {
+            "playerId": 0,
+            "name": "Neymar",
+            "image": "3.png"
+        },
+        {
+            "playerId": 116,
+            "name": "Wayne Rooney",
+            "image": "4.png"
+        }
+    ]
+}
 
 ```
  
