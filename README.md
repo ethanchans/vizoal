@@ -561,7 +561,7 @@ Vizoal API
 ###Header Parameters		
 	1) Content-Type = application/json 
  
- ### Response
+### Response
 ```
 
 {
