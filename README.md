@@ -8,6 +8,7 @@ Vizoal API
 <li> Get clubs by league id</li>
 <li> Get player profile by player id </li>
 <li> Get homepage players </li>
+<li> Search player by name </li>
 <li> Create an account </li>
 <li> Update an account </li>
 <li> Login </li>
@@ -547,30 +548,102 @@ Vizoal API
 }
 
 ```
+
+##6: Search player by name
+------------------------
+###
+###URL 
+        /vizoal/services/playerlistByName/{player_name}
+           
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
  
+ ### Response
+```
+
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-15-220",
+            "duration": 10
+        }
+    },
+    "result": [
+        {
+            "playerId": 14,
+            "firstName": "Theo",
+            "lastName": "Walcott",
+            "fullName": "Theo James Walcott",
+            "nickName": "",
+            "nationOfBirth": 122,
+            "nationDisplay": 122,
+            "nationOfBirthName": "England",
+            "cityOfBirth": "Newbury",
+            "dateOfBirth": "1989-03-16",
+            "nationDisplay_fmid": 765,
+            "age": 0,
+            "weight": "71kg",
+            "height": "176cm",
+            "preferFoot": "right",
+            "currentClub": 16,
+            "currentClubName": "Arsenal",
+            "fmId": 5125014,
+            "version": 1
+        },
+        {
+            "playerId": 15,
+            "firstName": "Jack",
+            "lastName": "Wilshere",
+            "fullName": "Jack Andrew Garry Wilshere",
+            "nickName": "",
+            "nationOfBirth": 122,
+            "nationDisplay": 122,
+            "nationOfBirthName": "England",
+            "cityOfBirth": "Stevenage",
+            "dateOfBirth": "1992-01-01",
+            "nationDisplay_fmid": 765,
+            "age": 0,
+            "weight": "65kg",
+            "height": "173cm",
+            "preferFoot": "left",
+            "currentClub": 16,
+            "currentClubName": "Arsenal",
+            "fmId": 29024338,
+            "version": 1
+        }
+        
+    ]
+}
+```
  
- 
-##6 : Create an account  
+##7 : Create an account  
 ------------------------
 ###Coming soon
 
 
-##7 : Update an account  
+##8 : Update an account  
 ------------------------
 ###Coming soon
 
 
-##8 : Login  
+##9 : Login  
 ------------------------
 ###Coming soon
 
 
-##9 : Post a comment  
+##10 : Post a comment  
 ------------------------
 ###Coming soon
 
 
-##10 : Get comment list by player id  
+##11 : Get comment list by player id  
 ------------------------
 ###Coming soon
 
