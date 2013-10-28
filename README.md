@@ -502,12 +502,16 @@ Vizoal API
 ###Header Parameters		
 	1) Content-Type = application/json 
 	
-###Image URL (it has different quality, mostly just for android to pick proper image size)
+###Image URL 
 
-	/vizoal/image/android/homepage/hdRez/1.png
-	/vizoal/image/android/homepage/hiRez/1.png
-	/vizoal/image/android/homepage/medRez/1.png
-	/vizoal/image/android/homepage/lowRez/1.png
+Android:	/vizoal/image/android/homepage/hdRez/1.png
+		/vizoal/image/android/homepage/hiRez/1.png
+		/vizoal/image/android/homepage/medRez/1.png
+		/vizoal/image/android/homepage/lowRez/1.png
+	
+IOS:		/vizoal/image/ios/homepage/iphone1/1.png
+		/vizoal/image/ios/homepage/iphone2/1.png
+		/vizoal/image/ios/homepage/iphone5/1.png
 
 ### Response
 ```
