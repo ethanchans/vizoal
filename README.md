@@ -503,7 +503,7 @@ Vizoal API
 	1) Content-Type = application/json 
 	
 ###Image URL 
-
+```
 Android:	
 		/vizoal/image/android/homepage/hdRez/1.png
 		/vizoal/image/android/homepage/hiRez/1.png
@@ -514,6 +514,7 @@ IOS:
 		/vizoal/image/ios/homepage/iphone1/1.png
 		/vizoal/image/ios/homepage/iphone2/1.png
 		/vizoal/image/ios/homepage/iphone5/1.png
+```
 
 ### Response
 ```
