@@ -14,6 +14,8 @@ Vizoal API
 <li> Login </li>
 <li> Post a comment </li>
 <li> Get comment list by player id </li>
+<li> Get old comment list by player id </li>
+<li> country logo url </li>
 
 </ol>
 
@@ -647,11 +649,328 @@ IOS:
 
 ##10 : Post a comment  
 ------------------------
-###Coming soon
+###
+###URL 
+        /vizoal/services/playerComment
+           
+###Method			
+	POST
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Request
+```
+{
+    "playerId": 14,
+    "userName": "ethanchen",
+    "comment": "fk222..............."
+}
+```
+
+### Response
+
+It will return new inserted player comment id
+
+```
+
+{
+  "status": {
+    "code": "200",
+    "message": "success",
+    "errors": [],
+    "debug": {
+      "build": "1.0",
+      "serverName": "ethan",
+      "duration": 1634
+    }
+  },
+  "result": 135
+}
+```
 
 
-##11 : Get comment list by player id  
+##11 : Get latest comment list by player id  
 ------------------------
-###Coming soon
 
+###  It will return the latest 15 records
 
+###URL 
+        /vizoal/services/playerComment/{playerId}
+           
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 437
+        }
+    },
+    "result": [
+        {
+            "playerCommentId": 135,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk222...............",
+            "post_date": "2013-11-20 20:08:42"
+        },
+        {
+            "playerCommentId": 133,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "tredfgfcdf....again",
+            "post_date": "2013-11-21 04:00:47"
+        },
+        {
+            "playerCommentId": 132,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk222...............",
+            "post_date": "2013-11-20 20:00:27"
+        },
+        {
+            "playerCommentId": 131,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk...............",
+            "post_date": "2013-11-20 19:56:10"
+        },
+        {
+            "playerCommentId": 130,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk",
+            "post_date": "2013-11-20 19:55:20"
+        },
+        {
+            "playerCommentId": 125,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "tyy",
+            "post_date": "2013-11-10 23:49:37"
+        },
+        {
+            "playerCommentId": 79,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "",
+            "post_date": "2013-10-28 06:28:09"
+        },
+        {
+            "playerCommentId": 63,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "hello",
+            "post_date": "2013-08-11 03:04:40"
+        },
+        {
+            "playerCommentId": 62,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": ".%46#%$&%%#$$%%$$&%$%%%%$&$+%7#7#8$8$+$+$?$8$8$8$8$9$8$+$&#&$&$&#6'+'&$9$7$7$9",
+            "post_date": "2013-08-08 02:37:27"
+        },
+        {
+            "playerCommentId": 46,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "huan",
+            "post_date": "2013-06-08 21:56:34"
+        },
+        {
+            "playerCommentId": 45,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "fff",
+            "post_date": "2013-06-08 21:55:40"
+        },
+        {
+            "playerCommentId": 43,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "rrrrrrrr",
+            "post_date": "2013-06-07 01:04:31"
+        },
+        {
+            "playerCommentId": 42,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "eeeeeee",
+            "post_date": "2013-06-07 01:04:08"
+        },
+        {
+            "playerCommentId": 41,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "trst",
+            "post_date": "2013-06-07 01:03:59"
+        },
+        {
+            "playerCommentId": 40,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "",
+            "post_date": "2013-06-06 07:52:35"
+        }
+    ]
+}
+```
+
+##12 : Get old comment list by player id  
+------------------------
+
+###  It returns 15 records before given playerCommentId
+
+###URL 
+        /vizoal/services/playerComment/old/{playerId}/{lastPlayerCommentId}
+       
+       Example:  Suppose currently your page is displaying 30 records about player xxx, and the playerCommentids are 200,199,198.....170.
+                 If you want to get 15 more earlier records about the player, the expected url is:
+                 /vizoal/services/playerComment/old/xxx/170.   
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 437
+        }
+    },
+    "result": [
+        {
+            "playerCommentId": 135,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk222...............",
+            "post_date": "2013-11-20 20:08:42"
+        },
+        {
+            "playerCommentId": 133,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "tredfgfcdf....again",
+            "post_date": "2013-11-21 04:00:47"
+        },
+        {
+            "playerCommentId": 132,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk222...............",
+            "post_date": "2013-11-20 20:00:27"
+        },
+        {
+            "playerCommentId": 131,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk...............",
+            "post_date": "2013-11-20 19:56:10"
+        },
+        {
+            "playerCommentId": 130,
+            "playerId": 14,
+            "userName": "ethanchen",
+            "comment": "fk",
+            "post_date": "2013-11-20 19:55:20"
+        },
+        {
+            "playerCommentId": 125,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "tyy",
+            "post_date": "2013-11-10 23:49:37"
+        },
+        {
+            "playerCommentId": 79,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "",
+            "post_date": "2013-10-28 06:28:09"
+        },
+        {
+            "playerCommentId": 63,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "hello",
+            "post_date": "2013-08-11 03:04:40"
+        },
+        {
+            "playerCommentId": 62,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": ".%46#%$&%%#$$%%$$&%$%%%%$&$+%7#7#8$8$+$+$?$8$8$8$8$9$8$+$&#&$&$&#6'+'&$9$7$7$9",
+            "post_date": "2013-08-08 02:37:27"
+        },
+        {
+            "playerCommentId": 46,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "huan",
+            "post_date": "2013-06-08 21:56:34"
+        },
+        {
+            "playerCommentId": 45,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "fff",
+            "post_date": "2013-06-08 21:55:40"
+        },
+        {
+            "playerCommentId": 43,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "rrrrrrrr",
+            "post_date": "2013-06-07 01:04:31"
+        },
+        {
+            "playerCommentId": 42,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "eeeeeee",
+            "post_date": "2013-06-07 01:04:08"
+        },
+        {
+            "playerCommentId": 41,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "trst",
+            "post_date": "2013-06-07 01:03:59"
+        },
+        {
+            "playerCommentId": 40,
+            "playerId": 14,
+            "userName": "unknown",
+            "comment": "",
+            "post_date": "2013-06-06 07:52:35"
+        }
+    ]
+}
+```
+
+##13 : Country logo url  
+------------------------
+###URL:   /vizoal/image/android/country_logo_profile/{density}/{fm_id}.png
+
+Example: http://ec2-54-215-136-21.us-west-1.compute.amazonaws.com:8080/vizoal/image/android/country_logo_profile/2.0/796.png
