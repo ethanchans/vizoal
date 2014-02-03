@@ -15,6 +15,7 @@ Vizoal API
 <li> Post a comment </li>
 <li> Get comment list by player id </li>
 <li> Get old comment list by player id </li>
+<li> Get player participation </li>
 <li> country logo url </li>
 
 </ol>
@@ -969,7 +970,66 @@ It will return new inserted player comment id
 }
 ```
 
-##13 : Country logo url  
+##13 : Get player participation  
+------------------------
+###URL:   /vizoal/services/player/participation/{player_id}
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-12-36",
+            "duration": 24
+        }
+    },
+    "result": {
+        "playerParticipationId": 2032,
+        "gameStarted": 18,
+        "goals": 0,
+        "assists": 0,
+        "totalPasses": 788,
+        "accuratePasses": 671,
+        "aerialWon": 78,
+        "aerialLost": 24,
+        "rating": "7.3500004",
+        "manOfTheMatch": 2,
+        "totalTackles": 25,
+        "interceptions": 38,
+        "fouls": 18,
+        "offSidesWon": 9,
+        "totalClearances": 200,
+        "totalShots": 7,
+        "shotsOnTarget": 1,
+        "keyPasses": 3,
+        "totalCrosses": 0,
+        "accurateCrosses": 0,
+        "yellow": 3,
+        "secondYellow": 0,
+        "red": 1,
+        "totalLongBalls": 122,
+        "accurateLongBalls": 89,
+        "totalThroughBalls": 0,
+        "accurateThroughBalls": 0,
+        "playerId": 123,
+        "season": null
+    }
+}
+    
+```
+
+##14 : Country logo url  
 ------------------------
 ###URL:   /vizoal/image/android/country_logo_profile/{density}/{fm_id}.png
 
