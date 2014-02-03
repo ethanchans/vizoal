@@ -972,7 +972,10 @@ It will return new inserted player comment id
 
 ##13 : Get player participation  
 ------------------------
-###URL:   /vizoal/services/player/participation/{player_id}
+###URL:   
+```
+/vizoal/services/player/participation/{player_id}
+```
 
 ###Method			
 	GET
