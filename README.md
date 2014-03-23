@@ -1,6 +1,8 @@
 Vizoal API
 ==================================================
 
+Global Path: http://api.vizoal.com
+
 ##APIs
 <ol>
 <li> Get popular players </li>
@@ -1036,4 +1038,4 @@ It will return new inserted player comment id
 ------------------------
 ###URL:   /vizoal/image/android/country_logo_profile/{density}/{fm_id}.png
 
-Example: http://ec2-54-215-136-21.us-west-1.compute.amazonaws.com:8080/vizoal/image/android/country_logo_profile/2.0/796.png
+Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796.png
