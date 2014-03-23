@@ -571,11 +571,14 @@ IOS:
 
 ```
 
-##6: Search player by name
+##6: Search by name
 ------------------------
 ###
 ###URL 
-        /vizoal/services/playerlistByName/{player_name}
+        
+        	/vizoal/services/search/{limit}/{offset}/Aston
+        
+        Sample: /vizoal/services/search/10/0/Aston
            
 ###Method			
 	GET
@@ -593,55 +596,85 @@ IOS:
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ip-172-31-15-220",
-            "duration": 10
+            "serverName": "ip-172-31-12-36",
+            "duration": 26
         }
     },
-    "result": [
-        {
-            "playerId": 14,
-            "firstName": "Theo",
-            "lastName": "Walcott",
-            "fullName": "Theo James Walcott",
-            "nickName": "",
-            "nationOfBirth": 122,
-            "nationDisplay": 122,
-            "nationOfBirthName": "England",
-            "cityOfBirth": "Newbury",
-            "dateOfBirth": "1989-03-16",
-            "nationDisplay_fmid": 765,
-            "age": 0,
-            "weight": "71kg",
-            "height": "176cm",
-            "preferFoot": "right",
-            "currentClub": 16,
-            "currentClubName": "Arsenal",
-            "fmId": 5125014,
-            "version": 1
-        },
-        {
-            "playerId": 15,
-            "firstName": "Jack",
-            "lastName": "Wilshere",
-            "fullName": "Jack Andrew Garry Wilshere",
-            "nickName": "",
-            "nationOfBirth": 122,
-            "nationDisplay": 122,
-            "nationOfBirthName": "England",
-            "cityOfBirth": "Stevenage",
-            "dateOfBirth": "1992-01-01",
-            "nationDisplay_fmid": 765,
-            "age": 0,
-            "weight": "65kg",
-            "height": "173cm",
-            "preferFoot": "left",
-            "currentClub": 16,
-            "currentClubName": "Arsenal",
-            "fmId": 29024338,
-            "version": 1
-        }
-        
-    ]
+    "result": {
+        "totalCount": 5,
+        "searchItemList": [
+            {
+                "type": "player",
+                "playerId": 282,
+                "playerName": "Ramírez Gastón",
+                "playerFMId": 78027222,
+                "clubId": 28,
+                "clubName": "Southampton",
+                "clubFMId": 713,
+                "leagueId": null,
+                "leagueName": "",
+                "countryId": 93,
+                "countryName": "Uruguay",
+                "countryFMId": 1657
+            },
+            {
+                "type": "player",
+                "playerId": 1138,
+                "playerName": "Demichelis Martín",
+                "playerFMId": 952826,
+                "clubId": 22,
+                "clubName": "Manchester City",
+                "clubFMId": 679,
+                "leagueId": null,
+                "leagueName": "",
+                "countryId": 92,
+                "countryName": "Argentina",
+                "countryFMId": 1649
+            },
+            {
+                "type": "player",
+                "playerId": 1984,
+                "playerName": "López Maxi",
+                "playerFMId": 951030,
+                "clubId": 77,
+                "clubName": "Sampdoria",
+                "clubFMId": 1167,
+                "leagueId": null,
+                "leagueName": "",
+                "countryId": 92,
+                "countryName": "Argentina",
+                "countryFMId": 1649
+            },
+            {
+                "type": "player",
+                "playerId": 2145,
+                "playerName": "Rubén Marco ",
+                "playerFMId": 961949,
+                "clubId": 129,
+                "clubName": "Evian",
+                "clubFMId": 3502354,
+                "leagueId": null,
+                "leagueName": "",
+                "countryId": 92,
+                "countryName": "Argentina",
+                "countryFMId": 1649
+            },
+            {
+                "type": "club",
+                "playerId": null,
+                "playerName": "",
+                "playerFMId": null,
+                "clubId": 17,
+                "clubName": "Aston Villa",
+                "clubFMId": 603,
+                "leagueId": 11,
+                "leagueName": "Premier League",
+                "countryId": 122,
+                "countryName": "England",
+                "countryFMId": 765
+            }
+        ]
+    }
 }
 ```
  
