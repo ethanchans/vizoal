@@ -3,10 +3,12 @@ Vizoal API
 
 Global Path: http://api.vizoal.com
 
+------------------------
 Player Image：  /vizoal/image/android/player/2.0/{player_fm_id}.png
 Club Image：    /vizoal/image/android/club_logo/2.0/{club_fm_id}.png
 Country Image： /vizoal/image/android/country_logo_profile/2.0/{country_fm_id}.png
 League Image：  /vizoal/image/android/league/{league_fm_id}.png
+------------------------
 
 ##APIs
 <ol>
