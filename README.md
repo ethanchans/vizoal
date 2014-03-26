@@ -17,14 +17,14 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Get clubs by league id</li>
 <li> Get player profile by player id </li>
 <li> Get homepage players </li>
-<li> Search player by name </li>
+<li> Search </li>
 <li> Create an account </li>
 <li> Update an account </li>
 <li> Login </li>
 <li> Post a comment </li>
 <li> Get comment list by player id </li>
 <li> Get old comment list by player id </li>
-<li> Get player participation </li>
+<li> Get player statistics </li>
 <li> country logo url </li>
 
 </ol>
@@ -571,14 +571,18 @@ IOS:
 
 ```
 
-##6: Search by name
+##6: Search 
 ------------------------
 ###
 ###URL 
-        
-        	/vizoal/services/search/{limit}/{offset}/Aston
-        
-        Sample: /vizoal/services/search/10/0/Aston
+```
+       /vizoal/services/search?keyword={keyword}&limit={limit}&offset={offset}
+       
+       Sample: http://localhost:8080/vizoal/services/search?keyword=Diego%20Mil&offset=0&limit=10
+       
+       offset: start from
+       limit:  how many records per page
+```
            
 ###Method			
 	GET
@@ -760,117 +764,40 @@ It will return new inserted player comment id
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ethan",
-            "duration": 437
+            "serverName": "ip-172-31-12-36",
+            "duration": 14
         }
     },
-    "result": [
-        {
-            "playerCommentId": 135,
-            "playerId": 14,
-            "userName": "ethanchen",
-            "comment": "fk222...............",
-            "post_date": "2013-11-20 20:08:42"
-        },
-        {
-            "playerCommentId": 133,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "tredfgfcdf....again",
-            "post_date": "2013-11-21 04:00:47"
-        },
-        {
-            "playerCommentId": 132,
-            "playerId": 14,
-            "userName": "ethanchen",
-            "comment": "fk222...............",
-            "post_date": "2013-11-20 20:00:27"
-        },
-        {
-            "playerCommentId": 131,
-            "playerId": 14,
-            "userName": "ethanchen",
-            "comment": "fk...............",
-            "post_date": "2013-11-20 19:56:10"
-        },
-        {
-            "playerCommentId": 130,
-            "playerId": 14,
-            "userName": "ethanchen",
-            "comment": "fk",
-            "post_date": "2013-11-20 19:55:20"
-        },
-        {
-            "playerCommentId": 125,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "tyy",
-            "post_date": "2013-11-10 23:49:37"
-        },
-        {
-            "playerCommentId": 79,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "",
-            "post_date": "2013-10-28 06:28:09"
-        },
-        {
-            "playerCommentId": 63,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "hello",
-            "post_date": "2013-08-11 03:04:40"
-        },
-        {
-            "playerCommentId": 62,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": ".%46#%$&%%#$$%%$$&%$%%%%$&$+%7#7#8$8$+$+$?$8$8$8$8$9$8$+$&#&$&$&#6'+'&$9$7$7$9",
-            "post_date": "2013-08-08 02:37:27"
-        },
-        {
-            "playerCommentId": 46,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "huan",
-            "post_date": "2013-06-08 21:56:34"
-        },
-        {
-            "playerCommentId": 45,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "fff",
-            "post_date": "2013-06-08 21:55:40"
-        },
-        {
-            "playerCommentId": 43,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "rrrrrrrr",
-            "post_date": "2013-06-07 01:04:31"
-        },
-        {
-            "playerCommentId": 42,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "eeeeeee",
-            "post_date": "2013-06-07 01:04:08"
-        },
-        {
-            "playerCommentId": 41,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "trst",
-            "post_date": "2013-06-07 01:03:59"
-        },
-        {
-            "playerCommentId": 40,
-            "playerId": 14,
-            "userName": "unknown",
-            "comment": "",
-            "post_date": "2013-06-06 07:52:35"
-        }
-    ]
+    "result": {
+        "totalCount": 8,
+        "playerCommentList": [
+            {
+                "playerCommentId": 311,
+                "playerId": 1205,
+                "userName": "wert",
+                "comment": "wow..........",
+                "displayTime": "just now",
+                "post_date": "2014-03-26 00:53:44"
+            },
+            {
+                "playerCommentId": 310,
+                "playerId": 1205,
+                "userName": "wert",
+                "comment": "ship i ship,,..................",
+                "displayTime": "12 minutes ago",
+                "post_date": "2014-03-26 00:41:05"
+            },
+            {
+                "playerCommentId": 308,
+                "playerId": 1205,
+                "userName": "Jason",
+                "comment": "test",
+                "displayTime": "1 hours ago",
+                "post_date": "2014-03-25 23:05:17"
+            }
+            ....................more
+        ]
+    }
 }
 ```
 
@@ -1015,11 +942,13 @@ It will return new inserted player comment id
 }
 ```
 
-##13 : Get player participation  
+##13 : Get player statistics  
 ------------------------
 ###URL:   
 ```
-/vizoal/services/player/participation/{player_id}
+/vizoal/services/playerStatistics/{player_id}
+
+Example: /vizoal/services/playerStatistics/1205
 ```
 
 ###Method			
@@ -1038,40 +967,28 @@ It will return new inserted player comment id
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ip-172-31-12-36",
-            "duration": 24
+            "serverName": "ethan",
+            "duration": 103
         }
     },
     "result": {
-        "playerParticipationId": 2032,
-        "gameStarted": 18,
-        "goals": 0,
-        "assists": 0,
-        "totalPasses": 788,
-        "accuratePasses": 671,
-        "aerialWon": 78,
-        "aerialLost": 24,
-        "rating": "7.3500004",
-        "manOfTheMatch": 2,
-        "totalTackles": 25,
-        "interceptions": 38,
-        "fouls": 18,
-        "offSidesWon": 9,
-        "totalClearances": 200,
-        "totalShots": 7,
-        "shotsOnTarget": 1,
-        "keyPasses": 3,
-        "totalCrosses": 0,
-        "accurateCrosses": 0,
-        "yellow": 3,
-        "secondYellow": 0,
-        "red": 1,
-        "totalLongBalls": 122,
-        "accurateLongBalls": 89,
-        "totalThroughBalls": 0,
-        "accurateThroughBalls": 0,
-        "playerId": 123,
-        "season": null
+        "playerId": null,
+        "appearance": "32(0)",
+        "manOfTheMatch": "12",
+        "rating": "8.63",
+        "goals": "39",
+        "assists": "10",
+        "yellowCards": "4",
+        "redCards": "1",
+        "passSuccessPercentage": "81.7%",
+        "shotsPerGame": "28",
+        "shotsOnTargetPerGame": "3.3",
+        "dribblePerGame": "2.4",
+        "tacklesPerGame": "0.7",
+        "interceptionPerGame": "0.1",
+        "clearancePerGame": "0.4",
+        "arialWonPerGame": "1.8",
+        "foulPerGame": "0.8"
     }
 }
     
