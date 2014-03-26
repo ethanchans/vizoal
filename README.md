@@ -578,7 +578,7 @@ IOS:
 ```
        /vizoal/services/search?keyword={keyword}&limit={limit}&offset={offset}
        
-       Sample: http://localhost:8080/vizoal/services/search?keyword=Diego%20Mil&offset=0&limit=10
+       Sample: /vizoal/services/search?keyword=Diego%20Mil&offset=0&limit=10
        
        offset: start from
        limit:  how many records per page
