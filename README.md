@@ -12,7 +12,7 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 
 ##APIs
 <ol>
-<li> Get popular players </li>
+<li> Get Top players </li>
 <li> Get players by club id</li>
 <li> Get clubs by league id</li>
 <li> Get player profile by player id </li>
@@ -26,13 +26,14 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Get old comment list by player id </li>
 <li> Get player statistics </li>
 <li> country logo url </li>
+<li> Top League List </li>
 
 </ol>
 
 ##1 : Get popular players
 ------------------------
 ###URL
-        /vizoal/services/playerlist/{rows}  
+        /vizoal/services/playerlist/1  
            
 ###Method			
 	GET
@@ -1000,3 +1001,122 @@ Example: /vizoal/services/playerStatistics/1205
 ###URL:   /vizoal/image/android/country_logo_profile/{density}/{fm_id}.png
 
 Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796.png
+
+
+##14 : Top League List
+
+###URL:   
+```
+/vizoal/services/topleaguelist
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-12-36",
+            "duration": 38
+        }
+    },
+    "result": [
+        {
+            "leagueId": 182,
+            "name": "World Cup 2014",
+            "nationality": 287,
+            "nationalityName": "FIFA",
+            "fmId": 1000000002,
+            "sort": 1,
+            "currentRound": 0,
+            "maxRound": 0,
+            "liveMatches": 0,
+            "version": 1
+        },
+        {
+            "leagueId": 181,
+            "name": "Champion League",
+            "nationality": 286,
+            "nationalityName": "UEFA",
+            "fmId": 1000000001,
+            "sort": 0,
+            "currentRound": 1,
+            "maxRound": 0,
+            "liveMatches": 0,
+            "version": 1
+        },
+        {
+            "leagueId": 11,
+            "name": "Premier League",
+            "nationality": 122,
+            "nationalityName": "England",
+            "fmId": 11,
+            "sort": 1,
+            "currentRound": 32,
+            "maxRound": 38,
+            "liveMatches": 0,
+            "version": 7
+        },
+        {
+            "leagueId": 17,
+            "name": "Bundesliga",
+            "nationality": 91,
+            "nationalityName": "Germany",
+            "fmId": 22,
+            "sort": 1,
+            "currentRound": 28,
+            "maxRound": 34,
+            "liveMatches": 0,
+            "version": 3
+        },
+        {
+            "leagueId": 21,
+            "name": "Ligue 1",
+            "nationality": 135,
+            "nationalityName": "France",
+            "fmId": 16,
+            "sort": 1,
+            "currentRound": 31,
+            "maxRound": 38,
+            "liveMatches": 0,
+            "version": 3
+        },
+        {
+            "leagueId": 19,
+            "name": "Primera División",
+            "nationality": 90,
+            "nationalityName": "Spain",
+            "fmId": 67,
+            "sort": 1,
+            "currentRound": 31,
+            "maxRound": 32,
+            "liveMatches": 0,
+            "version": 3
+        },
+        {
+            "leagueId": 15,
+            "name": "Serie A",
+            "nationality": 143,
+            "nationalityName": "Italy",
+            "fmId": 32,
+            "sort": 1,
+            "currentRound": 31,
+            "maxRound": 31,
+            "liveMatches": 0,
+            "version": 3
+        }
+    ]
+}
+    
+```
