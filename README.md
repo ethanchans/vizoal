@@ -1027,8 +1027,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ip-172-31-12-36",
-            "duration": 38
+            "serverName": "ethan",
+            "duration": 478
         }
     },
     "result": [
@@ -1037,11 +1037,25 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "name": "World Cup 2014",
             "nationality": 287,
             "nationalityName": "FIFA",
-            "fmId": 1000000002,
+            "fmId": 1301385,
             "sort": 1,
             "currentRound": 0,
             "maxRound": 0,
             "liveMatches": 0,
+            "matchdaySettingId": 1,
+            "matchdayDisplay": {
+                "1": "Group_matchday 1",
+                "2": "Group_matchday 2",
+                "3": "Group_matchday 3",
+                "4": "Group_matchday 4",
+                "5": "Group_matchday 5",
+                "6": "Group_matchday 6",
+                "7": "Round_of_16_first_leg",
+                "8": "Round_of_16_Second_leg",
+                "9": "Quarter_finals_first_leg",
+                "10": "Quarter_finals_second_leg",
+                "11": "Final"
+            },
             "version": 1
         },
         {
@@ -1049,11 +1063,25 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "name": "Champion League",
             "nationality": 286,
             "nationalityName": "UEFA",
-            "fmId": 1000000001,
+            "fmId": 1301394,
             "sort": 0,
             "currentRound": 1,
             "maxRound": 0,
             "liveMatches": 0,
+            "matchdaySettingId": 1,
+            "matchdayDisplay": {
+                "1": "Group_matchday 1",
+                "2": "Group_matchday 2",
+                "3": "Group_matchday 3",
+                "4": "Group_matchday 4",
+                "5": "Group_matchday 5",
+                "6": "Group_matchday 6",
+                "7": "Round_of_16_first_leg",
+                "8": "Round_of_16_Second_leg",
+                "9": "Quarter_finals_first_leg",
+                "10": "Quarter_finals_second_leg",
+                "11": "Final"
+            },
             "version": 1
         },
         {
@@ -1066,6 +1094,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "currentRound": 32,
             "maxRound": 38,
             "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
             "version": 7
         },
         {
@@ -1078,6 +1108,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "currentRound": 28,
             "maxRound": 34,
             "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
             "version": 3
         },
         {
@@ -1090,6 +1122,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "currentRound": 31,
             "maxRound": 38,
             "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
             "version": 3
         },
         {
@@ -1102,6 +1136,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "currentRound": 31,
             "maxRound": 32,
             "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
             "version": 3
         },
         {
@@ -1114,6 +1150,8 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "currentRound": 31,
             "maxRound": 31,
             "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
             "version": 3
         }
     ]
