@@ -967,13 +967,13 @@ Example: /vizoal/services/playerStatistics/1205
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ethan",
-            "duration": 103
+            "serverName": "ip-172-31-12-36",
+            "duration": 18
         }
     },
     "result": {
         "playerId": null,
-        "appearance": "32(0)",
+        "appearance": "32",
         "manOfTheMatch": "12",
         "rating": "8.63",
         "goals": "39",
@@ -981,6 +981,7 @@ Example: /vizoal/services/playerStatistics/1205
         "yellowCards": "4",
         "redCards": "1",
         "passSuccessPercentage": "81.7%",
+        "goalsPerGame": "1.2",
         "shotsPerGame": "28",
         "shotsOnTargetPerGame": "3.3",
         "dribblePerGame": "2.4",
