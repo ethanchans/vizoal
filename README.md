@@ -1166,7 +1166,7 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
 
 ###URL:   
 ```
-/vizoal/services/match/leagueMathches/{league_id}/{round}
+/vizoal/services/match/leagueMatchesIOS/{league_id}/{round}
 
 Sample: /vizoal/services/match/leagueMathches/11/31
 
@@ -1187,162 +1187,166 @@ Sample: /vizoal/services/match/leagueMathches/11/31
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ethan",
-            "duration": 341
+            "serverName": "ip-172-31-12-36",
+            "duration": 260
         }
     },
-    "result": [
-        {
-            "matchId": 1428,
-            "team1FMId": 630,
-            "team2FMId": 602,
-            "team1Goal": 6,
-            "team2Goal": 0,
-            "startTime": "2014-03-22 05:45",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Chelsea",
-            "clubName2": "Arsenal"
-        },
-        {
-            "matchId": 1434,
-            "team1FMId": 691,
-            "team2FMId": 722,
-            "team1Goal": 2,
-            "team2Goal": 0,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Norwich",
-            "clubName2": "Sunderland"
-        },
-        {
-            "matchId": 1433,
-            "team1FMId": 688,
-            "team2FMId": 642,
-            "team1Goal": 1,
-            "team2Goal": 0,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Newcastle",
-            "clubName2": "Crystal Palace"
-        },
-        {
-            "matchId": 1432,
-            "team1FMId": 679,
-            "team2FMId": 654,
-            "team1Goal": 5,
-            "team2Goal": 0,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Manchester City",
-            "clubName2": "Fulham"
-        },
-        {
-            "matchId": 1431,
-            "team1FMId": 665,
-            "team2FMId": 734,
-            "team1Goal": 2,
-            "team2Goal": 0,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Hull City",
-            "clubName2": "West Bromwich Albion"
-        },
-        {
-            "matchId": 1430,
-            "team1FMId": 650,
-            "team2FMId": 724,
-            "team1Goal": 3,
-            "team2Goal": 2,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Everton",
-            "clubName2": "Swansea"
-        },
-        {
-            "matchId": 1429,
-            "team1FMId": 625,
-            "team2FMId": 676,
-            "team1Goal": 3,
-            "team2Goal": 6,
-            "startTime": "2014-03-22 08:00",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Cardiff City",
-            "clubName2": "Liverpool"
-        },
-        {
-            "matchId": 1436,
-            "team1FMId": 735,
-            "team2FMId": 680,
-            "team1Goal": 0,
-            "team2Goal": 2,
-            "startTime": "2014-03-22 10:30",
-            "displayDate": "Saturday  |  March 22, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "West Ham",
-            "clubName2": "Manchester UTD"
-        },
-        {
-            "matchId": 1435,
-            "team1FMId": 728,
-            "team2FMId": 713,
-            "team1Goal": 3,
-            "team2Goal": 2,
-            "startTime": "2014-03-23 06:30",
-            "displayDate": "Sunday  |  March 23, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Tottenham",
-            "clubName2": "Southampton"
-        },
-        {
-            "matchId": 1437,
-            "team1FMId": 603,
-            "team2FMId": 721,
-            "team1Goal": 1,
-            "team2Goal": 4,
-            "startTime": "2014-03-23 09:00",
-            "displayDate": "Sunday  |  March 23, 2014",
-            "started": true,
-            "completed": true,
-            "postponed": false,
-            "currentTime": "FT",
-            "clubName1": "Aston Villa",
-            "clubName2": "Stoke"
-        }
-    ]
+    "result": {
+        "Saturday  |  March 22, 2014": [
+            {
+                "matchId": 1428,
+                "team1FMId": 630,
+                "team2FMId": 602,
+                "team1Goal": 6,
+                "team2Goal": 0,
+                "startTime": "2014-03-22 05:45",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Chelsea",
+                "clubName2": "Arsenal"
+            },
+            {
+                "matchId": 1434,
+                "team1FMId": 691,
+                "team2FMId": 722,
+                "team1Goal": 2,
+                "team2Goal": 0,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Norwich",
+                "clubName2": "Sunderland"
+            },
+            {
+                "matchId": 1433,
+                "team1FMId": 688,
+                "team2FMId": 642,
+                "team1Goal": 1,
+                "team2Goal": 0,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Newcastle",
+                "clubName2": "Crystal Palace"
+            },
+            {
+                "matchId": 1432,
+                "team1FMId": 679,
+                "team2FMId": 654,
+                "team1Goal": 5,
+                "team2Goal": 0,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Manchester City",
+                "clubName2": "Fulham"
+            },
+            {
+                "matchId": 1431,
+                "team1FMId": 665,
+                "team2FMId": 734,
+                "team1Goal": 2,
+                "team2Goal": 0,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Hull City",
+                "clubName2": "West Bromwich Albion"
+            },
+            {
+                "matchId": 1430,
+                "team1FMId": 650,
+                "team2FMId": 724,
+                "team1Goal": 3,
+                "team2Goal": 2,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Everton",
+                "clubName2": "Swansea"
+            },
+            {
+                "matchId": 1429,
+                "team1FMId": 625,
+                "team2FMId": 676,
+                "team1Goal": 3,
+                "team2Goal": 6,
+                "startTime": "2014-03-22 08:00",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Cardiff City",
+                "clubName2": "Liverpool"
+            },
+            {
+                "matchId": 1436,
+                "team1FMId": 735,
+                "team2FMId": 680,
+                "team1Goal": 0,
+                "team2Goal": 2,
+                "startTime": "2014-03-22 10:30",
+                "displayDate": "Saturday  |  March 22, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "West Ham",
+                "clubName2": "Manchester UTD"
+            }
+        ],
+        "Sunday  |  March 23, 2014": [
+            {
+                "matchId": 1435,
+                "team1FMId": 728,
+                "team2FMId": 713,
+                "team1Goal": 3,
+                "team2Goal": 2,
+                "startTime": "2014-03-23 06:30",
+                "displayDate": "Sunday  |  March 23, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Tottenham",
+                "clubName2": "Southampton"
+            },
+            {
+                "matchId": 1437,
+                "team1FMId": 603,
+                "team2FMId": 721,
+                "team1Goal": 1,
+                "team2Goal": 4,
+                "startTime": "2014-03-23 09:00",
+                "displayDate": "Sunday  |  March 23, 2014",
+                "started": true,
+                "completed": true,
+                "postponed": false,
+                "currentTime": "FT",
+                "clubName1": "Aston Villa",
+                "clubName2": "Stoke"
+            }
+        ]
+    }
 }
 ```
 
@@ -1351,7 +1355,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
 
 ###URL:   
 ```
-/vizoal/services/match/clubMathches/{club_id}
+/vizoal/services/match/clubMatches/{club_id}
 
 Sample: /vizoal/services/match/clubMathches/16
 
