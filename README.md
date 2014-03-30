@@ -27,6 +27,8 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Get player statistics </li>
 <li> country logo url </li>
 <li> Top League List </li>
+<li> Get match list by league and round </li>
+<li> Get all match list by club id </li>
 
 </ol>
 
@@ -1157,4 +1159,429 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
     ]
 }
     
+```
+
+ 
+##16 : Get match list by league and round
+
+###URL:   
+```
+/vizoal/services/match/leagueMathches/{league_id}/{round}
+
+Sample: /vizoal/services/match/leagueMathches/11/31
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 341
+        }
+    },
+    "result": [
+        {
+            "matchId": 1428,
+            "team1FMId": 630,
+            "team2FMId": 602,
+            "team1Goal": 6,
+            "team2Goal": 0,
+            "startTime": "2014-03-22 05:45",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Chelsea",
+            "clubName2": "Arsenal"
+        },
+        {
+            "matchId": 1434,
+            "team1FMId": 691,
+            "team2FMId": 722,
+            "team1Goal": 2,
+            "team2Goal": 0,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Norwich",
+            "clubName2": "Sunderland"
+        },
+        {
+            "matchId": 1433,
+            "team1FMId": 688,
+            "team2FMId": 642,
+            "team1Goal": 1,
+            "team2Goal": 0,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Newcastle",
+            "clubName2": "Crystal Palace"
+        },
+        {
+            "matchId": 1432,
+            "team1FMId": 679,
+            "team2FMId": 654,
+            "team1Goal": 5,
+            "team2Goal": 0,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Manchester City",
+            "clubName2": "Fulham"
+        },
+        {
+            "matchId": 1431,
+            "team1FMId": 665,
+            "team2FMId": 734,
+            "team1Goal": 2,
+            "team2Goal": 0,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Hull City",
+            "clubName2": "West Bromwich Albion"
+        },
+        {
+            "matchId": 1430,
+            "team1FMId": 650,
+            "team2FMId": 724,
+            "team1Goal": 3,
+            "team2Goal": 2,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Everton",
+            "clubName2": "Swansea"
+        },
+        {
+            "matchId": 1429,
+            "team1FMId": 625,
+            "team2FMId": 676,
+            "team1Goal": 3,
+            "team2Goal": 6,
+            "startTime": "2014-03-22 08:00",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Cardiff City",
+            "clubName2": "Liverpool"
+        },
+        {
+            "matchId": 1436,
+            "team1FMId": 735,
+            "team2FMId": 680,
+            "team1Goal": 0,
+            "team2Goal": 2,
+            "startTime": "2014-03-22 10:30",
+            "displayDate": "Saturday  |  March 22, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "West Ham",
+            "clubName2": "Manchester UTD"
+        },
+        {
+            "matchId": 1435,
+            "team1FMId": 728,
+            "team2FMId": 713,
+            "team1Goal": 3,
+            "team2Goal": 2,
+            "startTime": "2014-03-23 06:30",
+            "displayDate": "Sunday  |  March 23, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Tottenham",
+            "clubName2": "Southampton"
+        },
+        {
+            "matchId": 1437,
+            "team1FMId": 603,
+            "team2FMId": 721,
+            "team1Goal": 1,
+            "team2Goal": 4,
+            "startTime": "2014-03-23 09:00",
+            "displayDate": "Sunday  |  March 23, 2014",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Aston Villa",
+            "clubName2": "Stoke"
+        }
+    ]
+}
+```
+
+
+##17 : Get all match list by club id
+
+###URL:   
+```
+/vizoal/services/match/clubMathches/{club_id}
+
+Sample: /vizoal/services/match/clubMathches/16
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 282
+        }
+    },
+    "result": [
+        {
+            "matchId": 73,
+            "team1FMId": 602,
+            "team2FMId": 603,
+            "team1Goal": 1,
+            "team2Goal": 1,
+            "startTime": "2013-08-17 07:00",
+            "displayDate": "Saturday  |  August 17, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Aston Villa",
+            "matchdayDisplay": "Matchday 1",
+            "matchType": "league"
+        },
+        {
+            "matchId": 774,
+            "team1FMId": 654,
+            "team2FMId": 602,
+            "team1Goal": 1,
+            "team2Goal": 3,
+            "startTime": "2013-08-24 04:45",
+            "displayDate": "Saturday  |  August 24, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Fulham",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 2",
+            "matchType": "league"
+        },
+        {
+            "matchId": 793,
+            "team1FMId": 602,
+            "team2FMId": 728,
+            "team1Goal": 1,
+            "team2Goal": 0,
+            "startTime": "2013-09-01 08:00",
+            "displayDate": "Sunday  |  September 1, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Tottenham",
+            "matchdayDisplay": "Matchday 3",
+            "matchType": "league"
+        },
+        {
+            "matchId": 800,
+            "team1FMId": 722,
+            "team2FMId": 602,
+            "team1Goal": 1,
+            "team2Goal": 3,
+            "startTime": "2013-09-14 07:00",
+            "displayDate": "Saturday  |  September 14, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Sunderland",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 4",
+            "matchType": "league"
+        },
+        {
+            "matchId": 811,
+            "team1FMId": 602,
+            "team2FMId": 721,
+            "team1Goal": 3,
+            "team2Goal": 1,
+            "startTime": "2013-09-22 05:30",
+            "displayDate": "Sunday  |  September 22, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Stoke",
+            "matchdayDisplay": "Matchday 5",
+            "matchType": "league"
+        },
+        {
+            "matchId": 821,
+            "team1FMId": 724,
+            "team2FMId": 602,
+            "team1Goal": 1,
+            "team2Goal": 2,
+            "startTime": "2013-09-28 09:30",
+            "displayDate": "Saturday  |  September 28, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Swansea",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 6",
+            "matchType": "league"
+        },
+        {
+            "matchId": 834,
+            "team1FMId": 734,
+            "team2FMId": 602,
+            "team1Goal": 1,
+            "team2Goal": 1,
+            "startTime": "2013-10-06 08:00",
+            "displayDate": "Sunday  |  October 6, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "West Bromwich Albion",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 7",
+            "matchType": "league"
+        },
+        {
+            "matchId": 836,
+            "team1FMId": 602,
+            "team2FMId": 691,
+            "team1Goal": 4,
+            "team2Goal": 1,
+            "startTime": "2013-10-19 07:00",
+            "displayDate": "Saturday  |  October 19, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Norwich",
+            "matchdayDisplay": "Matchday 8",
+            "matchType": "league"
+        },
+        {
+            "matchId": 845,
+            "team1FMId": 642,
+            "team2FMId": 602,
+            "team1Goal": 0,
+            "team2Goal": 2,
+            "startTime": "2013-10-26 04:45",
+            "displayDate": "Saturday  |  October 26, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Crystal Palace",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 9",
+            "matchType": "league"
+        },
+        {
+            "matchId": 862,
+            "team1FMId": 602,
+            "team2FMId": 676,
+            "team1Goal": 2,
+            "team2Goal": 0,
+            "startTime": "2013-11-02 10:30",
+            "displayDate": "Saturday  |  November 2, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Liverpool",
+            "matchdayDisplay": "Matchday 10",
+            "matchType": "league"
+        },
+        {
+            "matchId": 873,
+            "team1FMId": 680,
+            "team2FMId": 602,
+            "team1Goal": 1,
+            "team2Goal": 0,
+            "startTime": "2013-11-10 08:10",
+            "displayDate": "Sunday  |  November 10, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Manchester UTD",
+            "clubName2": "Arsenal",
+            "matchdayDisplay": "Matchday 11",
+            "matchType": "league"
+        },
+        {
+            "matchId": 47,
+            "team1FMId": 602,
+            "team2FMId": 713,
+            "team1Goal": 1,
+            "team2Goal": 0,
+            "startTime": "2013-11-23 07:00",
+            "displayDate": "Saturday  |  November 23, 2013",
+            "started": true,
+            "completed": true,
+            "postponed": false,
+            "currentTime": "FT",
+            "clubName1": "Arsenal",
+            "clubName2": "Southampton",
+            "matchdayDisplay": "Matchday 12",
+            "matchType": "league"
+        }
+        ...
+    ]
+}
 ```
