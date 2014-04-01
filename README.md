@@ -29,6 +29,9 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Top League List </li>
 <li> Get match list by league and round </li>
 <li> Get all match list by club id </li>
+<li> Ranking - team standing </li>
+<li> Ranking - top scorer </li>
+<li> Ranking - top assists </li>
 
 </ol>
 
@@ -1168,7 +1171,7 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
 ```
 /vizoal/services/match/leagueMatchesIOS/{league_id}/{round}
 
-Sample: /vizoal/services/match/leagueMathches/11/31
+Sample: /vizoal/services/match/leagueMatchesIOS/11/31
 
 ```
 
@@ -1187,8 +1190,8 @@ Sample: /vizoal/services/match/leagueMathches/11/31
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ip-172-31-12-36",
-            "duration": 260
+            "serverName": "ethan",
+            "duration": 157
         }
     },
     "result": {
@@ -1200,6 +1203,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 6,
                 "team2Goal": 0,
                 "startTime": "2014-03-22 05:45",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1215,6 +1219,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 2,
                 "team2Goal": 0,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1230,6 +1235,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 1,
                 "team2Goal": 0,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1245,6 +1251,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 5,
                 "team2Goal": 0,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1260,13 +1267,14 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 2,
                 "team2Goal": 0,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
                 "postponed": false,
                 "currentTime": "FT",
                 "clubName1": "Hull City",
-                "clubName2": "West Bromwich Albion"
+                "clubName2": "West Bromwich"
             },
             {
                 "matchId": 1430,
@@ -1275,6 +1283,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 3,
                 "team2Goal": 2,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1290,6 +1299,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 3,
                 "team2Goal": 6,
                 "startTime": "2014-03-22 08:00",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1305,6 +1315,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 0,
                 "team2Goal": 2,
                 "startTime": "2014-03-22 10:30",
+                "amOrPM": "AM",
                 "displayDate": "Saturday  |  March 22, 2014",
                 "started": true,
                 "completed": true,
@@ -1322,6 +1333,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 3,
                 "team2Goal": 2,
                 "startTime": "2014-03-23 06:30",
+                "amOrPM": "AM",
                 "displayDate": "Sunday  |  March 23, 2014",
                 "started": true,
                 "completed": true,
@@ -1337,6 +1349,7 @@ Sample: /vizoal/services/match/leagueMathches/11/31
                 "team1Goal": 1,
                 "team2Goal": 4,
                 "startTime": "2014-03-23 09:00",
+                "amOrPM": "AM",
                 "displayDate": "Sunday  |  March 23, 2014",
                 "started": true,
                 "completed": true,
@@ -1585,6 +1598,450 @@ Sample: /vizoal/services/match/clubMathches/16
             "matchdayDisplay": "Matchday 12",
             "matchType": "league"
         }
+        ...
+    ]
+}
+```
+
+##18 : Ranking - team standing
+
+###URL:   
+```
+/vizoal/services/league/statistics/{league_id}
+
+Sample: /vizoal/services/league/statistics/11
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 122
+        }
+    },
+    "result": [
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 772,
+            "clubId": 21,
+            "clubName": "Liverpool F.C.",
+            "clubShortName": "Liverpool",
+            "clubFMId": 676,
+            "played": 32,
+            "win": 22,
+            "draw": 5,
+            "loss": 5,
+            "goalDifference": "49",
+            "goalsFor": 88,
+            "goalsAgainst": 39,
+            "points": 71
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 773,
+            "clubId": 18,
+            "clubName": "Chelsea F.C.",
+            "clubShortName": "Chelsea",
+            "clubFMId": 630,
+            "played": 32,
+            "win": 21,
+            "draw": 6,
+            "loss": 5,
+            "goalDifference": "38",
+            "goalsFor": 62,
+            "goalsAgainst": 24,
+            "points": 69
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 774,
+            "clubId": 22,
+            "clubName": "Manchester City F.C.",
+            "clubShortName": "Manchester City",
+            "clubFMId": 679,
+            "played": 30,
+            "win": 21,
+            "draw": 4,
+            "loss": 5,
+            "goalDifference": "52",
+            "goalsFor": 80,
+            "goalsAgainst": 28,
+            "points": 67
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 775,
+            "clubId": 16,
+            "clubName": "Arsenal F.C.",
+            "clubShortName": "Arsenal",
+            "clubFMId": 602,
+            "played": 32,
+            "win": 19,
+            "draw": 7,
+            "loss": 6,
+            "goalDifference": "19",
+            "goalsFor": 56,
+            "goalsAgainst": 37,
+            "points": 64
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 776,
+            "clubId": 19,
+            "clubName": "Everton F.C.",
+            "clubShortName": "Everton",
+            "clubFMId": 650,
+            "played": 31,
+            "win": 17,
+            "draw": 9,
+            "loss": 5,
+            "goalDifference": "18",
+            "goalsFor": 49,
+            "goalsAgainst": 31,
+            "points": 60
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 777,
+            "clubId": 32,
+            "clubName": "Tottenham Hotspur F.C.",
+            "clubShortName": "Tottenham",
+            "clubFMId": 728,
+            "played": 32,
+            "win": 17,
+            "draw": 5,
+            "loss": 10,
+            "goalDifference": "-4",
+            "goalsFor": 40,
+            "goalsAgainst": 44,
+            "points": 56
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 778,
+            "clubId": 23,
+            "clubName": "Manchester United F.C.",
+            "clubShortName": "Manchester UTD",
+            "clubFMId": 680,
+            "played": 32,
+            "win": 16,
+            "draw": 6,
+            "loss": 10,
+            "goalDifference": "14",
+            "goalsFor": 52,
+            "goalsAgainst": 38,
+            "points": 54
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 779,
+            "clubId": 28,
+            "clubName": "Southampton F.C.",
+            "clubShortName": "Southampton",
+            "clubFMId": 713,
+            "played": 32,
+            "win": 13,
+            "draw": 9,
+            "loss": 10,
+            "goalDifference": "9",
+            "goalsFor": 49,
+            "goalsAgainst": 40,
+            "points": 48
+        },
+        {
+            "leagueId": 11,
+            "leagueStatisticsId": 780,
+            "clubId": 24,
+            "clubName": "Newcastle United F.C.",
+            "clubShortName": "Newcastle",
+            "clubFMId": 688,
+            "played": 32,
+            "win": 14,
+            "draw": 4,
+            "loss": 14,
+            "goalDifference": "-9",
+            "goalsFor": 38,
+            "goalsAgainst": 47,
+            "points": 46
+        },
+        ...
+         
+    ]
+}
+```
+
+##19 : Ranking - top scorer
+
+###URL:   
+```
+/vizoal/services/league/topScorer/{league_id}
+
+Sample: /vizoal/services/league/topScorer/11
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 115
+        }
+    },
+    "result": [
+        {
+            "topScorerId": 331,
+            "playerId": 122,
+            "leagueId": 11,
+            "totalGoals": 29,
+            "penaltyGoal": 0,
+            "matchPlayed": 27,
+            "playerFirstName": "Luis",
+            "playerLastName": "Suárez",
+            "teamName": "Liverpool F.C.",
+            "playerFMId": "78000335"
+        },
+        {
+            "topScorerId": 332,
+            "playerId": 253,
+            "leagueId": 11,
+            "totalGoals": 20,
+            "penaltyGoal": 0,
+            "matchPlayed": 22,
+            "playerFirstName": "Daniel",
+            "playerLastName": "Sturridge",
+            "teamName": "Liverpool F.C.",
+            "playerFMId": "5127717"
+        },
+        {
+            "topScorerId": 333,
+            "playerId": 120,
+            "leagueId": 11,
+            "totalGoals": 17,
+            "penaltyGoal": 0,
+            "matchPlayed": 29,
+            "playerFirstName": "Yaya",
+            "playerLastName": "Touré",
+            "teamName": "Manchester City F.C.",
+            "playerFMId": "533344"
+        },
+        {
+            "topScorerId": 335,
+            "playerId": 121,
+            "leagueId": 11,
+            "totalGoals": 15,
+            "penaltyGoal": 0,
+            "matchPlayed": 15,
+            "playerFirstName": "Sergio",
+            "playerLastName": "Agüero",
+            "teamName": "Manchester City F.C.",
+            "playerFMId": "957002"
+        },
+        {
+            "topScorerId": 336,
+            "playerId": 116,
+            "leagueId": 11,
+            "totalGoals": 15,
+            "penaltyGoal": 0,
+            "matchPlayed": 25,
+            "playerFirstName": "Wayne",
+            "playerLastName": "Rooney",
+            "teamName": "Manchester United F.C.",
+            "playerFMId": "5108390"
+        },
+        {
+            "topScorerId": 334,
+            "playerId": 406,
+            "leagueId": 11,
+            "totalGoals": 15,
+            "penaltyGoal": 0,
+            "matchPlayed": 29,
+            "playerFirstName": "Jay",
+            "playerLastName": "Rodriguez",
+            "teamName": "Southampton F.C.",
+            "playerFMId": "5128651"
+        },
+        {
+            "topScorerId": 337,
+            "playerId": 152,
+            "leagueId": 11,
+            "totalGoals": 14,
+            "penaltyGoal": 0,
+            "matchPlayed": 31,
+            "playerFirstName": "Eden",
+            "playerLastName": "Hazard",
+            "teamName": "Chelsea F.C.",
+            "playerFMId": "18004418"
+        },
+        {
+            "topScorerId": 339,
+            "playerId": 108,
+            "leagueId": 11,
+            "totalGoals": 13,
+            "penaltyGoal": 0,
+            "matchPlayed": 30,
+            "playerFirstName": "Olivier",
+            "playerLastName": "Giroud",
+            "teamName": "Arsenal F.C.",
+            "playerFMId": "34000647"
+        },
+        ...
+    ]
+}
+```
+##20 : Ranking - top assists
+
+###URL:   
+```
+/vizoal/services/league/topAssist/{league_id}
+
+Sample: /vizoal/services/league/topAssist/11
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 120
+        }
+    },
+    "result": [
+        {
+            "topAssistId": null,
+            "playerId": 122,
+            "leagueId": 11,
+            "assists": 11,
+            "matchPlayed": 27,
+            "playerFirstName": "Luis",
+            "playerLastName": "Suárez",
+            "teamName": "Liverpool F.C.",
+            "playerFMId": "78000335"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 116,
+            "leagueId": 11,
+            "assists": 10,
+            "matchPlayed": 25,
+            "playerFirstName": "Wayne",
+            "playerLastName": "Rooney",
+            "teamName": "Manchester United F.C.",
+            "playerFMId": "5108390"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 364,
+            "leagueId": 11,
+            "assists": 10,
+            "matchPlayed": 26,
+            "playerFirstName": "Rickie",
+            "playerLastName": "Lambert",
+            "teamName": "Southampton F.C.",
+            "playerFMId": "4001311"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 131,
+            "leagueId": 11,
+            "assists": 9,
+            "matchPlayed": 27,
+            "playerFirstName": "Steven",
+            "playerLastName": "Gerrard",
+            "teamName": "Liverpool F.C.",
+            "playerFMId": "108658"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 127,
+            "leagueId": 11,
+            "assists": 8,
+            "matchPlayed": 18,
+            "playerFirstName": "David",
+            "playerLastName": "Silva",
+            "teamName": "Manchester City F.C.",
+            "playerFMId": "7458280"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 1209,
+            "leagueId": 11,
+            "assists": 8,
+            "matchPlayed": 21,
+            "playerFirstName": "Mesut",
+            "playerLastName": "Özil",
+            "teamName": "Arsenal F.C.",
+            "playerFMId": "35002219"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 152,
+            "leagueId": 11,
+            "assists": 7,
+            "matchPlayed": 31,
+            "playerFirstName": "Eden",
+            "playerLastName": "Hazard",
+            "teamName": "Chelsea F.C.",
+            "playerFMId": "18004418"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 108,
+            "leagueId": 11,
+            "assists": 7,
+            "matchPlayed": 30,
+            "playerFirstName": "Olivier",
+            "playerLastName": "Giroud",
+            "teamName": "Arsenal F.C.",
+            "playerFMId": "34000647"
+        },
+        {
+            "topAssistId": null,
+            "playerId": 253,
+            "leagueId": 11,
+            "assists": 7,
+            "matchPlayed": 22,
+            "playerFirstName": "Daniel",
+            "playerLastName": "Sturridge",
+            "teamName": "Liverpool F.C.",
+            "playerFMId": "5127717"
+        },
         ...
     ]
 }
