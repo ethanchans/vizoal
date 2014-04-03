@@ -2074,8 +2074,8 @@ Sample: /vizoal/services/club/21
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ip-172-31-12-36",
-            "duration": 343
+            "serverName": "ethan",
+            "duration": 3343
         }
     },
     "result": {
@@ -2100,67 +2100,33 @@ Sample: /vizoal/services/club/21
                 "playerId": 290,
                 "firstName": "Coutinho",
                 "lastName": "",
-                "fullName": "Philippe Coutinho Correia",
                 "nickName": "Coutinho",
-                "nationOfBirth": 96,
-                "nationOfBirthName": "Brazil",
-                "nationDisplay": 96,
-                "cityOfBirth": "Rio de Janeiro",
-                "dateOfBirth": "1992-06-12",
-                "nationDisplay_fmid": 1651,
-                "age": 0,
-                "weight": "71",
-                "height": "172",
-                "preferFoot": "right",
-                "currentClub": 21,
+                "fmId": 19046041,
+                "nationality_fmid": null,
+                "currentClub": null,
                 "currentClubName": "Liverpool",
                 "clubNumber": "10",
-                "fmId": 19046041,
-                "version": 3,
-                "playerPositionList": [
-                    {
-                        "playerPositionId": 1071,
-                        "playerId": 290,
-                        "name": "AMC",
-                        "efficiency": "100%",
-                        "order": null,
-                        "version": 1
-                    },
-                    {
-                        "playerPositionId": 1072,
-                        "playerId": 290,
-                        "name": "AML",
-                        "efficiency": "90%",
-                        "order": null,
-                        "version": 1
-                    },
-                    {
-                        "playerPositionId": 1073,
-                        "playerId": 290,
-                        "name": "AMR",
-                        "efficiency": "80%",
-                        "order": null,
-                        "version": 1
-                    },
-                    {
-                        "playerPositionId": 1074,
-                        "playerId": 290,
-                        "name": "MC",
-                        "efficiency": "70%",
-                        "order": null,
-                        "version": 1
-                    },
-                    {
-                        "playerPositionId": 1075,
-                        "playerId": 290,
-                        "name": "ML",
-                        "efficiency": "70%",
-                        "order": null,
-                        "version": 1
-                    }
-                ]
+                "club_fm_id": null,
+                "nationOfDisplayName": "Brazil",
+                "rating": "7.41",
+                "postionDisplay": "AMC,AML"
             },
-             ...
+            {
+                "playerId": 2227,
+                "firstName": "Luis Alberto",
+                "lastName": "",
+                "nickName": "",
+                "fmId": 67131771,
+                "nationality_fmid": null,
+                "currentClub": null,
+                "currentClubName": "Liverpool",
+                "clubNumber": "6",
+                "club_fm_id": null,
+                "nationOfDisplayName": "Spain",
+                "rating": "6.21",
+                "postionDisplay": "AMC,AML"
+            },
+	    ...
         ]
     }
 }
