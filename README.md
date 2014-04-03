@@ -32,6 +32,8 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Ranking - team standing </li>
 <li> Ranking - top scorer </li>
 <li> Ranking - top assists </li>
+<li> Club profile </li>
+<li> Video by league </li>
 
 </ol>
 
@@ -2043,6 +2045,187 @@ Sample: /vizoal/services/league/topAssist/11
             "playerFMId": "5127717"
         },
         ...
+    ]
+}
+```
+
+##21 : Club profile
+
+###URL:   
+```
+/vizoal/services/club/{league_id}
+
+Sample: /vizoal/services/club/21
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ip-172-31-12-36",
+            "duration": 343
+        }
+    },
+    "result": {
+        "clubId": 21,
+        "name": "Liverpool F.C.",
+        "clubNameShort": "Liverpool",
+        "leagueId": 11,
+        "leagueName": "Premier League",
+        "leagueFMID": 11,
+        "nationID": 122,
+        "nationName": "England",
+        "nationFMID": 765,
+        "foundYear": "1892",
+        "city": "Liverpool",
+        "homeField": "Anfield",
+        "fmId": 676,
+        "thirdPartyId": 26,
+        "sort": 0,
+        "version": 2,
+        "playerList": [
+            {
+                "playerId": 290,
+                "firstName": "Coutinho",
+                "lastName": "",
+                "fullName": "Philippe Coutinho Correia",
+                "nickName": "Coutinho",
+                "nationOfBirth": 96,
+                "nationOfBirthName": "Brazil",
+                "nationDisplay": 96,
+                "cityOfBirth": "Rio de Janeiro",
+                "dateOfBirth": "1992-06-12",
+                "nationDisplay_fmid": 1651,
+                "age": 0,
+                "weight": "71",
+                "height": "172",
+                "preferFoot": "right",
+                "currentClub": 21,
+                "currentClubName": "Liverpool",
+                "clubNumber": "10",
+                "fmId": 19046041,
+                "version": 3,
+                "playerPositionList": [
+                    {
+                        "playerPositionId": 1071,
+                        "playerId": 290,
+                        "name": "AMC",
+                        "efficiency": "100%",
+                        "order": null,
+                        "version": 1
+                    },
+                    {
+                        "playerPositionId": 1072,
+                        "playerId": 290,
+                        "name": "AML",
+                        "efficiency": "90%",
+                        "order": null,
+                        "version": 1
+                    },
+                    {
+                        "playerPositionId": 1073,
+                        "playerId": 290,
+                        "name": "AMR",
+                        "efficiency": "80%",
+                        "order": null,
+                        "version": 1
+                    },
+                    {
+                        "playerPositionId": 1074,
+                        "playerId": 290,
+                        "name": "MC",
+                        "efficiency": "70%",
+                        "order": null,
+                        "version": 1
+                    },
+                    {
+                        "playerPositionId": 1075,
+                        "playerId": 290,
+                        "name": "ML",
+                        "efficiency": "70%",
+                        "order": null,
+                        "version": 1
+                    }
+                ]
+            },
+             ...
+        ]
+    }
+}
+```
+
+##21 : Video by league
+
+###URL:   
+```
+/vizoal/services/match/video/league?&leagueId={leagueId}&offset={offset}&limit={limit}
+
+Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
+
+```
+
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+ 
+### Response
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 1468
+        }
+    },
+    "result": [
+        {
+            "videoId": 1,
+            "videoName": " [16/03/2014] Manchester United 0-3 Liverpool (All Goals & Highlights)",
+            "videoLong": "04:41",
+            "createDate": "03/16/2014",
+            "matchType": "league",
+            "leagueId": 11,
+            "url": "http://www.dailymotion.com/embed/video/x1hl1lr",
+            "videoType": "MatchHighLights"
+        },
+        {
+            "videoId": 2,
+            "videoName": " [16/03/2014] Tottenham 0-1 Arsenal (all goals - highlights)",
+            "videoLong": "02:09",
+            "createDate": "03/16/2014",
+            "matchType": "league",
+            "leagueId": 11,
+            "url": "http://www.dailymotion.com/embed/video/x1hp4e7",
+            "videoType": "MatchHighLights"
+        },
+        {
+            "videoId": 3,
+            "videoName": " [15/03/2014] Aston Villa 1 - 0 Chelsea",
+            "videoLong": "05:28",
+            "createDate": "03/15/2014",
+            "matchType": "league",
+            "leagueId": 11,
+            "url": "http://www.dailymotion.com/embed/video/x1hariw",
+            "videoType": "MatchHighLights"
+        }
     ]
 }
 ```
