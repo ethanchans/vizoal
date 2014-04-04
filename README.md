@@ -1035,36 +1035,10 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
         "debug": {
             "build": "1.0",
             "serverName": "ethan",
-            "duration": 478
+            "duration": 387
         }
     },
     "result": [
-        {
-            "leagueId": 182,
-            "name": "World Cup 2014",
-            "nationality": 287,
-            "nationalityName": "FIFA",
-            "fmId": 1301385,
-            "sort": 1,
-            "currentRound": 0,
-            "maxRound": 0,
-            "liveMatches": 0,
-            "matchdaySettingId": 1,
-            "matchdayDisplay": {
-                "1": "Group_matchday 1",
-                "2": "Group_matchday 2",
-                "3": "Group_matchday 3",
-                "4": "Group_matchday 4",
-                "5": "Group_matchday 5",
-                "6": "Group_matchday 6",
-                "7": "Round_of_16_first_leg",
-                "8": "Round_of_16_Second_leg",
-                "9": "Quarter_finals_first_leg",
-                "10": "Quarter_finals_second_leg",
-                "11": "Final"
-            },
-            "version": 1
-        },
         {
             "leagueId": 181,
             "name": "Champion League",
@@ -1073,22 +1047,23 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "fmId": 1301394,
             "sort": 0,
             "currentRound": 1,
-            "maxRound": 0,
+            "maxRound": 1,
             "liveMatches": 0,
             "matchdaySettingId": 1,
             "matchdayDisplay": {
-                "1": "Group_matchday 1",
-                "2": "Group_matchday 2",
-                "3": "Group_matchday 3",
-                "4": "Group_matchday 4",
-                "5": "Group_matchday 5",
-                "6": "Group_matchday 6",
-                "7": "Round_of_16_first_leg",
-                "8": "Round_of_16_Second_leg",
-                "9": "Quarter_finals_first_leg",
-                "10": "Quarter_finals_second_leg",
+                "1": "Group Matchday 1",
+                "2": "Group Matchday 2",
+                "3": "Group Matchday 3",
+                "4": "Group Matchday 4",
+                "5": "Group Matchday 5",
+                "6": "Group Matchday 6",
+                "7": "Round of 16 first leg",
+                "8": "Round of 16 Second leg",
+                "9": "Quarter Finals first_leg",
+                "10": "Quarter Finals second leg",
                 "11": "Final"
             },
+            "type": "cup",
             "version": 1
         },
         {
@@ -1098,11 +1073,12 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "nationalityName": "England",
             "fmId": 11,
             "sort": 1,
-            "currentRound": 32,
+            "currentRound": 33,
             "maxRound": 38,
             "liveMatches": 0,
             "matchdaySettingId": 0,
             "matchdayDisplay": null,
+            "type": "league",
             "version": 7
         },
         {
@@ -1112,11 +1088,12 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "nationalityName": "Germany",
             "fmId": 22,
             "sort": 1,
-            "currentRound": 28,
+            "currentRound": 29,
             "maxRound": 34,
             "liveMatches": 0,
             "matchdaySettingId": 0,
             "matchdayDisplay": null,
+            "type": "league",
             "version": 3
         },
         {
@@ -1126,11 +1103,12 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "nationalityName": "France",
             "fmId": 16,
             "sort": 1,
-            "currentRound": 31,
+            "currentRound": 32,
             "maxRound": 38,
             "liveMatches": 0,
             "matchdaySettingId": 0,
             "matchdayDisplay": null,
+            "type": "league",
             "version": 3
         },
         {
@@ -1140,11 +1118,12 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "nationalityName": "Spain",
             "fmId": 67,
             "sort": 1,
-            "currentRound": 31,
-            "maxRound": 32,
+            "currentRound": 32,
+            "maxRound": 38,
             "liveMatches": 0,
             "matchdaySettingId": 0,
             "matchdayDisplay": null,
+            "type": "league",
             "version": 3
         },
         {
@@ -1154,11 +1133,12 @@ Example: http://api.vizoal.com/vizoal/image/android/country_logo_profile/2.0/796
             "nationalityName": "Italy",
             "fmId": 32,
             "sort": 1,
-            "currentRound": 31,
-            "maxRound": 31,
+            "currentRound": 32,
+            "maxRound": 38,
             "liveMatches": 0,
             "matchdaySettingId": 0,
             "matchdayDisplay": null,
+            "type": "league",
             "version": 3
         }
     ]
@@ -1499,7 +1479,8 @@ Sample: /vizoal/services/league/statistics/11
             "goalDifference": "49",
             "goalsFor": 88,
             "goalsAgainst": 39,
-            "points": 71
+            "points": 71,
+            "groupName": "Group A"
         },
         {
             "leagueId": 11,
@@ -1515,7 +1496,8 @@ Sample: /vizoal/services/league/statistics/11
             "goalDifference": "38",
             "goalsFor": 62,
             "goalsAgainst": 24,
-            "points": 69
+            "points": 69,
+            "groupName": "Group A"
         },
         {
             "leagueId": 11,
@@ -1531,7 +1513,8 @@ Sample: /vizoal/services/league/statistics/11
             "goalDifference": "52",
             "goalsFor": 80,
             "goalsAgainst": 28,
-            "points": 67
+            "points": 67,
+            "groupName": "Group A"
         },
         {
             "leagueId": 11,
@@ -1547,7 +1530,8 @@ Sample: /vizoal/services/league/statistics/11
             "goalDifference": "19",
             "goalsFor": 56,
             "goalsAgainst": 37,
-            "points": 64
+            "points": 64,
+            "groupName": "Group A"
         },
         {
             "leagueId": 11,
