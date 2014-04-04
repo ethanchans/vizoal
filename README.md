@@ -1372,7 +1372,7 @@ Sample: /vizoal/services/match/leagueMatchesIOS/11/31
 ```
 /vizoal/services/match/clubMatches/{club_id}
 
-Sample: /vizoal/services/match/clubMathches/16
+Sample: /vizoal/services/match/clubMatches/16
 
 ```
 
