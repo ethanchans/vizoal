@@ -34,6 +34,7 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Ranking - top assists </li>
 <li> Club profile </li>
 <li> Video by league </li>
+<li> IOS crash log </li>
 
 </ol>
 
@@ -2043,5 +2044,45 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
             "videoType": "MatchHighLights"
         }
     ]
+}
+```
+##22 : IOS crash log  
+------------------------
+###
+###URL 
+        /vizoal/services/iosCrashreport
+           
+###Method			
+	POST
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Request
+```
+{
+    "app_version": "1.0",
+    "phone_mode": "iphone4",
+    "ios_version": "iso7",
+    "trace": "error detail goes here..."
+}
+```
+
+### Response
+
+
+```
+{
+  "status": {
+    "code": "200",
+    "message": "success",
+    "errors": [],
+    "debug": {
+      "build": "1.0",
+      "serverName": "ethan",
+      "duration": 923
+    }
+  },
+  "result": 4
 }
 ```
