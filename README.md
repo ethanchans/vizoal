@@ -35,6 +35,12 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Club profile </li>
 <li> Video by league </li>
 <li> IOS crash log </li>
+<li> Match and match live </li>
+<li> Match statistics </li>
+<li> Match players </li>
+<li> Post a match comment </li>
+<li> Load match comment by match id</li>
+<li> Load old match comment by match id</li>
 
 </ol>
 
@@ -2086,3 +2092,254 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
   "result": 4
 }
 ```
+
+##23 : Match and match live 
+------------------------
+###
+###URL 
+        
+```     
+	/vizoal/services/match/liveall?matchId=(matchId)&live_flag=true&live_version={version}
+
+        Sample:
+        First time call:  /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=0
+        Later:            /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=41
+        
+        When first time call this API, put live_version as '0'. And then once get the first batch of results back,
+        get the version value from the result.
+```      
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 137
+        }
+    },
+    "result": {
+        "matchBase": {
+            "matchId": 2043,
+            "team1Id": 109,
+            "team2Id": 120,
+            "team1FMId": 1687,
+            "team2FMId": 1708,
+            "team1Goal": 1,
+            "team2Goal": 0,
+            "startTime": "2014-04-09 11:45",
+            "started": true,
+            "completed": true,
+            "currentTime": "FT",
+            "clubName1": "AT Madrid",
+            "clubName2": "Barcelona",
+            "team1Formation": "433",
+            "team2Formation": "433",
+            "postponed": false,
+            "version": 41,
+            "leagueName": null,
+            "leagueFMID": null,
+            "leagueId": null,
+            "parentId": null,
+            "round": null
+        },
+        "matchLiveList": [
+            {
+                "matchLiveId": 61917,
+                "actionTime": "90",
+                "actionType": "yellow",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": 7415,
+                "playerYellowName": "J. Mascherano",
+                "substPlayer1Id": null,
+                "substPlayer2Id": null,
+                "substPlayer1Name": "",
+                "substPlayer2Name": null,
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": false
+            },
+            {
+                "matchLiveId": 61916,
+                "actionTime": "90",
+                "actionType": "yellow",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": 80764,
+                "playerYellowName": "Koke",
+                "substPlayer1Id": null,
+                "substPlayer2Id": null,
+                "substPlayer1Name": "",
+                "substPlayer2Name": null,
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": true
+            },
+            {
+                "matchLiveId": 61915,
+                "actionTime": "79",
+                "actionType": "subst",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": null,
+                "playerYellowName": "",
+                "substPlayer1Id": 6319,
+                "substPlayer2Id": 19361,
+                "substPlayer1Name": "D. Villa",
+                "substPlayer2Name": "C. Rodríguez",
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": true
+            },
+            {
+                "matchLiveId": 61914,
+                "actionTime": "72",
+                "actionType": "subst",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": null,
+                "playerYellowName": "",
+                "substPlayer1Id": 9486,
+                "substPlayer2Id": 44055,
+                "substPlayer1Name": "A. Iniesta",
+                "substPlayer2Name": "Pedro",
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": false
+            },
+            {
+                "matchLiveId": 61913,
+                "actionTime": "62",
+                "actionType": "subst",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": null,
+                "playerYellowName": "",
+                "substPlayer1Id": 14089,
+                "substPlayer2Id": 7417,
+                "substPlayer1Name": "Adrián",
+                "substPlayer2Name": "Diego",
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": true
+            },
+            {
+                "matchLiveId": 61912,
+                "actionTime": "61",
+                "actionType": "subst",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": null,
+                "playerYellowName": "",
+                "substPlayer1Id": 8040,
+                "substPlayer2Id": 25244,
+                "substPlayer1Name": "C. Fàbregas",
+                "substPlayer2Name": "A. Sánchez",
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": false
+            },
+            {
+                "matchLiveId": 61911,
+                "actionTime": "18",
+                "actionType": "yellow",
+                "scorerId": null,
+                "scorerName": "",
+                "assistId": null,
+                "assistName": "",
+                "currentScore": null,
+                "playerYellowId": 44721,
+                "playerYellowName": "S. Busquets",
+                "substPlayer1Id": null,
+                "substPlayer2Id": null,
+                "substPlayer1Name": "",
+                "substPlayer2Name": null,
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": false
+            },
+            {
+                "matchLiveId": 61910,
+                "actionTime": "5",
+                "actionType": "goal",
+                "scorerId": 80764,
+                "scorerName": "Koke",
+                "assistId": 14089,
+                "assistName": "Adrián",
+                "currentScore": null,
+                "playerYellowId": null,
+                "playerYellowName": "",
+                "substPlayer1Id": null,
+                "substPlayer2Id": null,
+                "substPlayer1Name": "",
+                "substPlayer2Name": null,
+                "playerRedId": null,
+                "playerRedName": null,
+                "matchId": 2043,
+                "thirdPartyMatchId": null,
+                "version": 41,
+                "team1": true
+            }
+        ],
+        "matchCommentList": null
+    }
+}
+```
+<li> Match and match live </li>
+<li> Match statistics </li>
+<li> Match players </li>
+<li> Post a match comment </li>
+<li> Load match comment by match id</li>
+<li> Load old match comment by match id</li>
