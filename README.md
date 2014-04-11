@@ -2105,6 +2105,8 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
         First time call:  /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=0
         Later:            /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=41
         
+        Only need matchbase: /vizoal/services/match/liveall?matchId=2043&live_flag=false
+        
         When first time call this API, put live_version as '0'. And then once get the first batch of results back,
         use the version value from the result.
 ```      
