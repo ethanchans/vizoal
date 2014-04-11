@@ -2099,14 +2099,14 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 ###URL 
         
 ```     
-	/vizoal/services/match/liveall?matchId=(matchId)&live_flag=true&live_version={version}
+	/vizoal/services/match/liveall?matchId={matchId}&live_flag=true&live_version={version}
 
         Sample:
         First time call:  /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=0
         Later:            /vizoal/services/match/liveall?matchId=2043&live_flag=true&live_version=41
         
         When first time call this API, put live_version as '0'. And then once get the first batch of results back,
-        get the version value from the result.
+        use the version value from the result.
 ```      
 ###Method			
 	GET
@@ -2336,6 +2336,234 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
         "matchCommentList": null
     }
 }
+```
+
+##24 : Match statistics 
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/matchStatistics/{matchId}
+
+        Sample: /vizoal/services/matchStatistics/2043
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 90
+        }
+    },
+    "result": {
+        "totalShots1": "15",
+        "totalShots2": "12",
+        "shotsOnTarget1": "5",
+        "shotsOnTarget2": "3",
+        "accuratePass1": "166",
+        "accuratePass2": "574",
+        "totalThrows1": "16",
+        "totalThrows2": "23",
+        "aerialWon1": "20",
+        "aerialWon2": "8",
+        "totalPass1": "260",
+        "totalPass2": "654",
+        "totalTackle1": "35",
+        "totalTackle2": "21",
+        "aerialLost1": "8",
+        "aerialLost2": "20",
+        "wonCorners1": "6",
+        "wonCorners2": "7",
+        "possessionPercentage1": "28.8",
+        "possessionPercentage2": "71.2"
+    }
+}
+
+```
+
+##25 : Match players 
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/match/player/{matchId}
+
+        Sample: /vizoal/services/match/player/2043
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 181
+        }
+    },
+    "result": {
+        "team1MatchPlayers": [
+            {
+                "matchPlayerId": 2147343,
+                "matchId": 2043,
+                "playerId": 922,
+                "playerName": "Courtois",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 1,
+                "substTime": "0",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 109,
+                "fmid": 18026122,
+                "subst": false
+            },
+            {
+                "matchPlayerId": 2147345,
+                "matchId": 2043,
+                "playerId": 931,
+                "playerName": "Juanfran",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 2,
+                "substTime": "0",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 109,
+                "fmid": 7451701,
+                "subst": false
+            },
+            ...
+        ],
+        "team2MatchPlayers": [
+            {
+                "matchPlayerId": 2147361,
+                "matchId": 2043,
+                "playerId": 979,
+                "playerName": "Pinto",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 1,
+                "substTime": "0",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 120,
+                "fmid": 4200616,
+                "subst": false
+            },
+            {
+                "matchPlayerId": 2147365,
+                "matchId": 2043,
+                "playerId": 965,
+                "playerName": "Daniel Alves",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 2,
+                "substTime": "0",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 120,
+                "fmid": 315542,
+                "subst": false
+            },
+            ...
+        ],
+        "team1SubstMatchPlayers": [
+            {
+                "matchPlayerId": 2147359,
+                "matchId": 2043,
+                "playerId": 2308,
+                "playerName": "José Sosa",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 0,
+                "substTime": "1",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 109,
+                "fmid": 955655,
+                "subst": true
+            },
+            {
+                "matchPlayerId": 2147358,
+                "matchId": 2043,
+                "playerId": 899,
+                "playerName": "Diego",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 0,
+                "substTime": "1",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 109,
+                "fmid": 311148,
+                "subst": true
+            },
+            ...
+        ],
+        "team2SubstMatchPlayers": [
+            {
+                "matchPlayerId": 2147377,
+                "matchId": 2043,
+                "playerId": 978,
+                "playerName": "Mart??n Montoya",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 0,
+                "substTime": "1",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 120,
+                "fmid": 67053464,
+                "subst": true
+            },
+            {
+                "matchPlayerId": 2147376,
+                "matchId": 2043,
+                "playerId": 974,
+                "playerName": "Pedro",
+                "thirdPartyPlayerId": null,
+                "formationPlace": 0,
+                "substTime": "1",
+                "substWithId": null,
+                "substWithName": "",
+                "subWithThirdPartyId": null,
+                "teamId": 120,
+                "fmid": 1510305,
+                "subst": true
+            },
+            ...
+        ]
+    }
+}
+
 ```
 <li> Match and match live </li>
 <li> Match statistics </li>
