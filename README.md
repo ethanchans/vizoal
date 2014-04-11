@@ -2565,9 +2565,205 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 }
 
 ```
-<li> Match and match live </li>
-<li> Match statistics </li>
-<li> Match players </li>
-<li> Post a match comment </li>
-<li> Load match comment by match id</li>
-<li> Load old match comment by match id</li>
+
+##26 : Post a match comment  
+------------------------
+###
+###URL 
+        /vizoal/services/match/comment/add
+           
+###Method			
+	POST
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Request
+```
+{
+    "matchId": 2043,
+    "userName": "ethanchen",
+    "comment": "fk222..............."
+}
+```
+
+### Response
+
+
+```
+{
+  "status": {
+    "code": "200",
+    "message": "success",
+    "errors": [],
+    "debug": {
+      "build": "1.0",
+      "serverName": "ethan",
+      "duration": 126
+    }
+  },
+  "result": 111
+}
+```
+
+##27 : Load match comment by match id
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/match/comment/{match_id}
+
+        Sample: /vizoal/services/match/comment/2043
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 129
+        }
+    },
+    "result": {
+        "totalCount": 5,
+        "matchCommentList": [
+            {
+                "matchCommentId": 112,
+                "matchId": 2043,
+                "userName": "ethanchen",
+                "comment": "fk222...............",
+                "displayTime": "15 minutes ago",
+                "post_date": "2014-04-10 22:51:31"
+            },
+            {
+                "matchCommentId": 110,
+                "matchId": 2043,
+                "userName": "Chico",
+                "comment": "Come on barca, wake up and step up the game.",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 12:41:07"
+            },
+            {
+                "matchCommentId": 109,
+                "matchId": 2043,
+                "userName": "Ray",
+                "comment": "AT Madrid playing at home with an away goal advantage.",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:56:07"
+            },
+            {
+                "matchCommentId": 108,
+                "matchId": 2043,
+                "userName": "claire",
+                "comment": "stupid messi lol",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:54:20"
+            },
+            {
+                "matchCommentId": 107,
+                "matchId": 2043,
+                "userName": "Jason",
+                "comment": "What a goal!",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:53:44"
+            }
+        ]
+    }
+}
+
+```
+
+##28 : Load old match comment by match id
+------------------------
+###
+###URL 
+        
+    
+	/comment/old/{matchId}/{matchCommentId}
+
+        Sample: /vizoal/services/match/comment/old/2043/110
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 129
+        }
+    },
+    "result": {
+        "totalCount": 5,
+        "matchCommentList": [
+            {
+                "matchCommentId": 112,
+                "matchId": 2043,
+                "userName": "ethanchen",
+                "comment": "fk222...............",
+                "displayTime": "15 minutes ago",
+                "post_date": "2014-04-10 22:51:31"
+            },
+            {
+                "matchCommentId": 110,
+                "matchId": 2043,
+                "userName": "Chico",
+                "comment": "Come on barca, wake up and step up the game.",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 12:41:07"
+            },
+            {
+                "matchCommentId": 109,
+                "matchId": 2043,
+                "userName": "Ray",
+                "comment": "AT Madrid playing at home with an away goal advantage.",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:56:07"
+            },
+            {
+                "matchCommentId": 108,
+                "matchId": 2043,
+                "userName": "claire",
+                "comment": "stupid messi lol",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:54:20"
+            },
+            {
+                "matchCommentId": 107,
+                "matchId": 2043,
+                "userName": "Jason",
+                "comment": "What a goal!",
+                "displayTime": "2014-04-09",
+                "post_date": "2014-04-09 11:53:44"
+            }
+        ]
+    }
+}
+
+```
