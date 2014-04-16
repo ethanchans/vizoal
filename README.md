@@ -2406,7 +2406,7 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
     
 	/vizoal/services/match/player/{matchId}
 
-        Sample: /vizoal/services/match/player/2043
+        Sample: /vizoal/services/match/player/1824
        
 ###Method			
 	GET
@@ -2426,140 +2426,88 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
         "errors": [],
         "debug": {
             "build": "1.0",
-            "serverName": "ethan",
-            "duration": 181
+            "serverName": "vizoal",
+            "duration": 261
         }
     },
     "result": {
         "team1MatchPlayers": [
             {
-                "matchPlayerId": 2147343,
-                "matchId": 2043,
-                "playerId": 922,
-                "playerName": "Courtois",
+                "matchPlayerId": 2376204,
+                "matchId": 1824,
+                "playerId": 2729,
+                "playerName": "Yoel",
                 "thirdPartyPlayerId": null,
                 "formationPlace": 1,
-                "substTime": "0",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 109,
-                "fmid": 18026122,
-                "subst": false
-            },
-            {
-                "matchPlayerId": 2147345,
-                "matchId": 2043,
-                "playerId": 931,
-                "playerName": "Juanfran",
-                "thirdPartyPlayerId": null,
-                "formationPlace": 2,
-                "substTime": "0",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 109,
-                "fmid": 7451701,
-                "subst": false
+                "teamId": 135,
+                "fmid": 67010473,
+                "imageName": "67010473_1.png",
+                "yellow": 0,
+                "red": 0,
+                "goal": 0,
+                "subst": false,
+                "substIn": false,
+                "substOut": false
             },
             ...
         ],
         "team2MatchPlayers": [
             {
-                "matchPlayerId": 2147361,
-                "matchId": 2043,
-                "playerId": 979,
-                "playerName": "Pinto",
+                "matchPlayerId": 2376222,
+                "matchId": 1824,
+                "playerId": 1231,
+                "playerName": "Bravo",
                 "thirdPartyPlayerId": null,
                 "formationPlace": 1,
-                "substTime": "0",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 120,
-                "fmid": 4200616,
-                "subst": false
-            },
-            {
-                "matchPlayerId": 2147365,
-                "matchId": 2043,
-                "playerId": 965,
-                "playerName": "Daniel Alves",
-                "thirdPartyPlayerId": null,
-                "formationPlace": 2,
-                "substTime": "0",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 120,
-                "fmid": 315542,
-                "subst": false
+                "teamId": 214,
+                "fmid": 5251774,
+                "imageName": "5251774_1.png",
+                "yellow": 0,
+                "red": 0,
+                "goal": 0,
+                "subst": false,
+                "substIn": false,
+                "substOut": false
             },
             ...
         ],
         "team1SubstMatchPlayers": [
             {
-                "matchPlayerId": 2147359,
-                "matchId": 2043,
-                "playerId": 2308,
-                "playerName": "José Sosa",
+                "matchPlayerId": 2376216,
+                "matchId": 1824,
+                "playerId": 1010,
+                "playerName": "Fabi??n Orellana",
                 "thirdPartyPlayerId": null,
                 "formationPlace": 0,
-                "substTime": "1",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 109,
-                "fmid": 955655,
-                "subst": true
-            },
-            {
-                "matchPlayerId": 2147358,
-                "matchId": 2043,
-                "playerId": 899,
-                "playerName": "Diego",
-                "thirdPartyPlayerId": null,
-                "formationPlace": 0,
-                "substTime": "1",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 109,
-                "fmid": 311148,
-                "subst": true
+                "teamId": 135,
+                "fmid": 8835313,
+                "imageName": "8835313_1.png",
+                "yellow": 0,
+                "red": 0,
+                "goal": 0,
+                "subst": true,
+                "substIn": true,
+                "substOut": false
             },
             ...
         ],
         "team2SubstMatchPlayers": [
             {
-                "matchPlayerId": 2147377,
-                "matchId": 2043,
-                "playerId": 978,
-                "playerName": "Mart??n Montoya",
+                "matchPlayerId": 2376234,
+                "matchId": 1824,
+                "playerId": 2745,
+                "playerName": "Haris Seferović",
                 "thirdPartyPlayerId": null,
                 "formationPlace": 0,
-                "substTime": "1",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 120,
-                "fmid": 67053464,
-                "subst": true
-            },
-            {
-                "matchPlayerId": 2147376,
-                "matchId": 2043,
-                "playerId": 974,
-                "playerName": "Pedro",
-                "thirdPartyPlayerId": null,
-                "formationPlace": 0,
-                "substTime": "1",
-                "substWithId": null,
-                "substWithName": "",
-                "subWithThirdPartyId": null,
-                "teamId": 120,
-                "fmid": 1510305,
-                "subst": true
+                "teamId": 214,
+                "fmid": 69004248,
+                "imageName": "69004248_1.png",
+                "yellow": 0,
+                "red": 0,
+                "goal": 0,
+                "subst": true,
+                "substIn": true,
+                "substOut": false
             },
             ...
         ]
