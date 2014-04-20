@@ -41,6 +41,7 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Post a match comment </li>
 <li> Load match comment by match id</li>
 <li> Load old match comment by match id</li>
+<li> Videos by match id</li>
 
 </ol>
 
@@ -2717,3 +2718,53 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 }
 
 ```
+
+##29 : Videos by match id
+------------------------
+###
+###URL 
+        
+    
+	/services/match/video/match?matchId={matchId}&limit={limit}&offset={offset}
+
+        Sample: /services/match/video/match?matchId=1426&limit=10&offset=0
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "ethan",
+            "duration": 88
+        }
+    },
+    "result": [
+        {
+            "videoId": 1,
+            "videoName": " [16/03/2014] Manchester United 0-3 Liverpool (All Goals & Highlights)",
+            "videoLong": "04:41",
+            "createDate": "03/16/2014",
+            "matchType": "league",
+            "leagueId": 11,
+            "url": "http://www.dailymotion.com/embed/video/x1hl1lr",
+            "videoType": "MatchHighLights"
+        }
+    ]
+}
+
+```
+
+
