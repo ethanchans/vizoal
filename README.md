@@ -42,6 +42,9 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Load match comment by match id</li>
 <li> Load old match comment by match id</li>
 <li> Videos by match id</li>
+<li> Clubs by league id</li>
+<li> Setting league list</li>
+
 
 </ol>
 
@@ -2767,4 +2770,213 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 
 ```
 
+##30 : Clubs by league id
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/clublistByLeague/{league_id}
 
+        Sample: /vizoal/services/clublistByLeague/11
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 7
+        }
+    },
+    "result": [
+        {
+            "clubId": 16,
+            "name": "Arsenal F.C.",
+            "clubNameShort": "Arsenal",
+            "leagueId": 11,
+            "leagueName": "",
+            "leagueFMID": null,
+            "leagueImageName": null,
+            "nationID": null,
+            "nationName": "",
+            "nationFMID": null,
+            "foundYear": "1886",
+            "city": "London",
+            "homeField": "Emirates Stadium",
+            "fmId": 602,
+            "clubImageName": "602_1.png",
+            "sort": 1,
+            "version": 1,
+            "playerList": null
+        },
+        {
+            "clubId": 17,
+            "name": "Aston Villa F.C.",
+            "clubNameShort": "Aston Villa",
+            "leagueId": 11,
+            "leagueName": "",
+            "leagueFMID": null,
+            "leagueImageName": null,
+            "nationID": null,
+            "nationName": "",
+            "nationFMID": null,
+            "foundYear": "1874",
+            "city": "Witton",
+            "homeField": "Villa Park",
+            "fmId": 603,
+            "clubImageName": "603_1.png",
+            "sort": 1,
+            "version": 1,
+            "playerList": null
+        },
+        ...
+    ]
+}
+
+```
+
+##30 : Setting league list
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/settingleaguelist
+
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+
+### Response
+
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 8
+        }
+    },
+    "result": [
+        {
+            "leagueId": 11,
+            "name": "Premier League",
+            "nationality": 122,
+            "nationalityName": "",
+            "fmId": 11,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 35,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 7
+        },
+        {
+            "leagueId": 17,
+            "name": "Bundesliga",
+            "nationality": 91,
+            "nationalityName": "",
+            "fmId": 22,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 32,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 3
+        },
+        {
+            "leagueId": 21,
+            "name": "Ligue 1",
+            "nationality": 135,
+            "nationalityName": "",
+            "fmId": 16,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 34,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 3
+        },
+        {
+            "leagueId": 19,
+            "name": "Primera División",
+            "nationality": 90,
+            "nationalityName": "",
+            "fmId": 67,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 34,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 3
+        },
+        {
+            "leagueId": 15,
+            "name": "Serie A",
+            "nationality": 143,
+            "nationalityName": "",
+            "fmId": 32,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 35,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 0,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 3
+        },
+        {
+            "leagueId": 182,
+            "name": "World Cup 2014",
+            "nationality": 287,
+            "nationalityName": "",
+            "fmId": 1301385,
+            "imageName": null,
+            "sort": 1,
+            "currentRound": 0,
+            "maxRound": null,
+            "liveMatches": 0,
+            "matchdaySettingId": 2,
+            "matchdayDisplay": null,
+            "type": null,
+            "version": 1
+        }
+    ]
+}
+```
