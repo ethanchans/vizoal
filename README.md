@@ -44,6 +44,8 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Videos by match id</li>
 <li> Clubs by league id</li>
 <li> Setting league list</li>
+<li> IOS Notification Registration </li>
+
 
 
 </ol>
@@ -2978,5 +2980,46 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
             "version": 1
         }
     ]
+}
+```
+
+##31 : IOS Notification Registration
+------------------------
+###
+###URL 
+        
+    
+	/vizoal/services/notification/iosregister
+
+       
+###Method			
+	POST
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Request
+```
+{
+    "deviceToken": "asdfjhaweopihfa7jjdfkahdsjfiu3asdf3",
+    "clubIds": "3,4,5,6"
+}
+```
+
+### Response
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "vizoal",
+            "duration": 13
+        }
+    },
+    "result": "success"
 }
 ```
