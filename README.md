@@ -3037,7 +3037,7 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 }
 ```
 
-##31 : IOS Notification Registration
+##33 : IOS Notification Registration
 ------------------------
 ###
 ###URL 
@@ -3079,7 +3079,7 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 ```
 
 
-##31 : IOS Notification Test
+##34 : IOS Notification Test
 ------------------------
 ###
 ###URL 
