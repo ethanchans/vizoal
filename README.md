@@ -60,7 +60,7 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Clubs by league id</li>
 <li> Setting league list</li>
 <li> IOS Notification Registration </li>
-
+<li> IOS Notification Test</li>
 
 
 </ol>
@@ -3077,3 +3077,39 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
     "result": "success"
 }
 ```
+
+
+##31 : IOS Notification Test
+------------------------
+###
+###URL 
+```       
+        /vizoal/services/iosNotificationTest?token={token}&body={body}&actionKey={actionKey}&badge={badge}&sound={sound}&matchId={matchId}
+
+         sample:	/vizoal/services/iosNotificationTest?token=d2a07176 a749fd41 2b75d1bf 8f9b58e0 72cd3f95 42a3a6d7 053e44f0 242fb98a&body=hello world!&actionKey=Open&badge=2&sound=default&matchId=2345
+```
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Response
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 1614
+        }
+    },
+    "result": "success"
+}
+```
+
