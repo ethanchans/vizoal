@@ -3112,5 +3112,203 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 }
 ```
 
+##35 : News: Get new news
+------------------------
+###
+###URL 
+```       
+        /vizoal/services/news/all/{newsId}
+        
+	The result will be the latest 20 records when newsId>{newsId}.
+	
+	Example: If there are 100 news with newsId: 100,99,98,97,96....1.(100 is the latest one).
+	
+	/news/all/0 will return 20 records with newsId from 100-81
+	/news/all/90 will return 20 records with newsId from 100-91
+	/news/all/100 will return no record
+```
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
 
+### Response
 
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 16
+        }
+    },
+    "result": [
+        {
+            "newsId": 3969,
+            "title": "MK Dons 4-0 Manchester United | Capital One Cup second round match report",
+            "shortDescription": "Manchester United lost 4-0 at MK Dons in second round of the Capital One Cup to increase pressure on Louis van Gaal",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311372/3b07cf09-268e-455b-a4a3-3664a9e97396-140x84.jpeg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311043/3b07cf09-268e-455b-a4a3-3664a9e97396-460x276.jpeg",
+            "imageDescription": "Will Grigg celebrates after giving MK Dons a 2-0 lead over Manchester United. Photograph: JMP/REX",
+            "content": null,
+            "dateDisplay": "6 hours ago",
+            "detailURL": null,
+            "tags": "Capital One Cup"
+        },
+        {
+            "newsId": 3968,
+            "title": "Louis van Gaal ‘not shocked’ by Manchester United's defeat to MK Dons",
+            "shortDescription": "Manchester United manager Louis van Gaal admitted he was ‘not shocked’ by the manner of his team's 4-0 defeat to MK Dons in the Capital One Cup",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2014/8/27/1409097272475/louis-van-gaal-004.jpg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2014/8/27/1409097280431/louis-van-gaal-009.jpg",
+            "imageDescription": "Manchester United manager Louis van Gaal watches his team as they lost 4-0 to MK Dons. Photograph: Matt West/Matt West/BPI/Rex",
+            "content": null,
+            "dateDisplay": "3 hours ago",
+            "detailURL": null,
+            "tags": "Manchester United"
+        },
+        {
+            "newsId": 3967,
+            "title": "Burnley and Leicester fall to lower-league opposition in Capital One Cup",
+            "shortDescription": "Sheffield Wednesday won 1-0 at Burnley while Leicester City were beaten 1-0 at home by Shrewsbury in the second round of Capital One Cup",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Football/Pix/pictures/2014/8/27/1409097008256/Adthe-Nuhiu-Sheffield-Wed-006.jpg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Football/Pix/pictures/2014/8/27/1409097017132/Adthe-Nuhiu-Sheffield-Wed-011.jpg",
+            "imageDescription": "Atdhe Nuhiu scores the winning goal for Sheffield Wednesday at Burnley from the penalty spot. Photograph: Clive Brunskill/Getty Images",
+            "content": null,
+            "dateDisplay": "3 hours ago",
+            "detailURL": null,
+            "tags": "Capital One Cup"
+        },
+        ...
+    ]
+}
+```
+
+##36 : News: Get older news
+------------------------
+###
+###URL 
+```       
+        /vizoal/services/news/all/old/{newsId}
+        
+	The result will be the latest 20 records when newsId<{newsId}.
+	
+	Example: If there are 100 news with newsId: 100,99,98,97,96....1.(100 is the latest one).
+	
+	/news/all/old/81 will return 20 records with newsId from 80-61
+	/news/all/old/10 will return 20 records with newsId from 10-1
+	/news/all/old/51 will return 20 records with newsId from 50-31
+	/news/all/old/0 will return no record
+```
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Response
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 16
+        }
+    },
+    "result": [
+        {
+            "newsId": 3969,
+            "title": "MK Dons 4-0 Manchester United | Capital One Cup second round match report",
+            "shortDescription": "Manchester United lost 4-0 at MK Dons in second round of the Capital One Cup to increase pressure on Louis van Gaal",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311372/3b07cf09-268e-455b-a4a3-3664a9e97396-140x84.jpeg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311043/3b07cf09-268e-455b-a4a3-3664a9e97396-460x276.jpeg",
+            "imageDescription": "Will Grigg celebrates after giving MK Dons a 2-0 lead over Manchester United. Photograph: JMP/REX",
+            "content": null,
+            "dateDisplay": "6 hours ago",
+            "detailURL": null,
+            "tags": "Capital One Cup"
+        },
+        {
+            "newsId": 3968,
+            "title": "Louis van Gaal ‘not shocked’ by Manchester United's defeat to MK Dons",
+            "shortDescription": "Manchester United manager Louis van Gaal admitted he was ‘not shocked’ by the manner of his team's 4-0 defeat to MK Dons in the Capital One Cup",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2014/8/27/1409097272475/louis-van-gaal-004.jpg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2014/8/27/1409097280431/louis-van-gaal-009.jpg",
+            "imageDescription": "Manchester United manager Louis van Gaal watches his team as they lost 4-0 to MK Dons. Photograph: Matt West/Matt West/BPI/Rex",
+            "content": null,
+            "dateDisplay": "3 hours ago",
+            "detailURL": null,
+            "tags": "Manchester United"
+        },
+        {
+            "newsId": 3967,
+            "title": "Burnley and Leicester fall to lower-league opposition in Capital One Cup",
+            "shortDescription": "Sheffield Wednesday won 1-0 at Burnley while Leicester City were beaten 1-0 at home by Shrewsbury in the second round of Capital One Cup",
+            "thumbImageURL": "http://static.guim.co.uk/sys-images/Football/Pix/pictures/2014/8/27/1409097008256/Adthe-Nuhiu-Sheffield-Wed-006.jpg",
+            "imageURL": "http://static.guim.co.uk/sys-images/Football/Pix/pictures/2014/8/27/1409097017132/Adthe-Nuhiu-Sheffield-Wed-011.jpg",
+            "imageDescription": "Atdhe Nuhiu scores the winning goal for Sheffield Wednesday at Burnley from the penalty spot. Photograph: Clive Brunskill/Getty Images",
+            "content": null,
+            "dateDisplay": "3 hours ago",
+            "detailURL": null,
+            "tags": "Capital One Cup"
+        },
+        ...
+    ]
+}
+```
+
+##37 : News: Get news detail by news id
+------------------------
+###
+###URL 
+```       
+        /vizoal/services/news/{newsId}
+	
+```
+       
+###Method			
+	GET
+				
+###Header Parameters		
+	1) Content-Type = application/json 
+
+### Response
+
+```
+{
+    "status": {
+        "code": "200",
+        "message": "success",
+        "errors": [],
+        "debug": {
+            "build": "1.0",
+            "serverName": "localhost",
+            "duration": 13
+        }
+    },
+    "result": {
+        "newsId": 3969,
+        "title": "MK Dons 4-0 Manchester United | Capital One Cup second round match report",
+        "shortDescription": "Manchester United lost 4-0 at MK Dons in second round of the Capital One Cup to increase pressure on Louis van Gaal",
+        "thumbImageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311372/3b07cf09-268e-455b-a4a3-3664a9e97396-140x84.jpeg",
+        "imageURL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/8/27/1409096311043/3b07cf09-268e-455b-a4a3-3664a9e97396-460x276.jpeg",
+        "imageDescription": "Will Grigg celebrates after giving MK Dons a 2-0 lead over Manchester United. Photograph: JMP/REX",
+        "content": "<p>Unlike the Hitchhiker's Guide to the Galaxy, Louis van Gaal's Manchester United tactics’ playbook does not appear to have the phrase “Don’t Panic” written in large, friendly letters on the cover. There are those who would suggest the acquisition of &Aacute;ngel Di Mar&iacute;a indicates that it should, and Van Gaal would certainly be forgiven for muttering the words repeatedly to himself when he watches the recording of this match, because Milton Keynes did not so much beat his much-changed side as humiliate them.</p> \n<p>There was a certain irony in the fact Van Gaal said he was not shocked by the scoreline, because neither was Karl Robinson, the manager of the League One side. “I thought once we came to terms with the pace of the game we were comfortable, and we’ve showed everybody, journalists, those in the stadium and those who watched on TV, that we are a club going places,” said the 33-year-old. “We had a game plan, and it helped that Coventry on Saturday also played with a back three....",
+        "dateDisplay": "6 hours ago",
+        "detailURL": null,
+        "tags": "Capital One Cup"
+    }
+}
+```
