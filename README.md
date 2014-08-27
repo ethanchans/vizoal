@@ -3119,7 +3119,7 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 ```       
         /vizoal/services/news/all/{newsId}
         
-	The result will be the latest 20 records when newsId>{newsId}.
+	It will return latest 20 records with newsId>{newsId}.
 	
 	Example: If there are 100 news with newsId: 100,99,98,97,96....1.(100 is the latest one).
 	
@@ -3197,7 +3197,7 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
 ```       
         /vizoal/services/news/all/old/{newsId}
         
-	The result will be the latest 20 records when newsId<{newsId}.
+	It will return the latest 20 records when newsId<{newsId}.
 	
 	Example: If there are 100 news with newsId: 100,99,98,97,96....1.(100 is the latest one).
 	
