@@ -4,20 +4,18 @@ Vizoal API
 Global Path: http://api.vizoal.com
 
 ```
-新的图片URL:
-球员，俱乐部，国家的图都有2套： list 和 detail。  list是小图，用在所有的列表中（包括球员信息上面的国家和俱乐部也用用小图）。 detail的大图，放在像球员界面，俱乐部界面里面，比赛界面的2个队的图标
+New image URL:
 
 Player,Club,Country Image：  /vizoal/image/ios/list/{imageName}.png
                              /vizoal/image/ios/detail/{imageName}.png
 
-联赛的图需要用一套就可以
 League Image：  /vizoal/image/ios/league/{imageName}.png
 ```
 
 
 
 ```
-请不要用这套图了，因为很多都找不到
+Please donot use bleow old URLs
 
 Player Image：  /vizoal/image/android/player/2.0/{player_fm_id}.png
 Club Image：    /vizoal/image/android/club_logo/2.0/{club_fm_id}.png
@@ -61,8 +59,9 @@ League Image：  /vizoal/image/android/league/{league_fm_id}.png
 <li> Setting league list</li>
 <li> IOS Notification Registration </li>
 <li> IOS Notification Test</li>
-
-
+<li> News: Get new news </li>
+<li> News: Get older news </li>
+<li> News: Get news detail by news id </li>
 </ol>
 
 ##1 : Get popular players
@@ -3112,4 +3111,6 @@ Sample: /vizoal/services/match/video/league?&leagueId=11&offset=0&limit=20
     "result": "success"
 }
 ```
+
+
 
